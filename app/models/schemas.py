@@ -1,4 +1,4 @@
-"""Pydantic response models for the TradingAgents Market Data API."""
+"""Pydantic response models for the yFinance Market Data API."""
 from __future__ import annotations
 
 from typing import List, Optional

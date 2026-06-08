@@ -1,9 +1,7 @@
-"""TradingAgents Market Data API.
+"""yFinance Market Data API.
 
 A lightweight FastAPI service that provides price quotes, OHLCV candles,
-technical indicators, and news headlines using yfinance. Built to replace
-restricted/paid market-data endpoints for the TradingAgents Technical and
-Sentiment analyst agents.
+technical indicators, and news headlines using yfinance.
 """
 from __future__ import annotations
 
@@ -23,10 +21,10 @@ from app.services.market_data import get_candles, get_quote
 from app.services.news import get_news
 
 app = FastAPI(
-    title="TradingAgents Market Data API",
+    title="yFinance Market Data API",
     description=(
         "Free market data (price, candles, technical indicators, news) "
-        "powered by yfinance, for the TradingAgents multi-agent framework."
+        "powered by yfinance."
     ),
     version="1.0.0",
 )
@@ -53,7 +51,7 @@ def _check_key(provided: str | None) -> None:
 def root():
     """Health check and endpoint directory."""
     return {
-        "service": "TradingAgents Market Data API",
+        "service": "yFinance Market Data API",
         "status": "ok",
         "endpoints": {
             "quote": "/quote/{symbol}",
