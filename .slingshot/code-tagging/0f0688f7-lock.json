@@ -1,0 +1,4362 @@
+{
+  ".claude\\skills\\qe-api-testing.md": {
+    "filename": "qe-api-testing.md",
+    "path": ".claude\\skills\\qe-api-testing.md",
+    "version": "1.2",
+    "contextFile": "0f0688f7-context.json",
+    "chunks": {
+      "4feddb": {
+        "user": "You",
+        "model": "gpt-4o",
+        "timestamp": 1780911329,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.2",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "fe3a0c27"
+        },
+        "hash": "de4537a6",
+        "messageId": "system_6ef28390-631b-11f1-9164-3971691abb57",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4o\n- **timestamp**: 6/8/2026, 3:05:29 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "4feddb",
+        "hash": "df0202f3",
+        "encoded": "#%20qe-api-testing%20%E2%80%94%20Comprehensive%20QE%20Skill%20for%20yfinance-api%20Testing",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "4feddb",
+        "hash": "46f22f27",
+        "encoded": "Automated%20Quality%20Engineering%20skill%20for%20comprehensive%20API%20testing%20of%20the%20yfinance-api%20service.",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "4feddb",
+        "hash": "3ffea27d",
+        "encoded": "This%20skill%20provides%20pytest-based%20test%20automation%20with%20fixtures,%20parametrized%20tests,%20schema%20validation,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "4feddb",
+        "hash": "0c822542",
+        "encoded": "edge%20case%20coverage,%20and%20CI/CD%20integration%20capabilities.",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "4feddb",
+        "hash": "94a4194d",
+        "encoded": "##%20Overview",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "4feddb",
+        "hash": "72b726f3",
+        "encoded": "This%20QE%20skill%20creates%20a%20complete%20test%20automation%20framework%20for%20the%20yfinance-api%20with:",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "4feddb",
+        "hash": "e57d8daf",
+        "encoded": "-%20**Pytest%20framework**%20with%20fixtures%20and%20parametrization",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "4feddb",
+        "hash": "00ac1071",
+        "encoded": "-%20**Schema%20validation**%20using%20Pydantic%20models",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "4feddb",
+        "hash": "7cdbe985",
+        "encoded": "-%20**Response%20assertions**%20for%20status%20codes,%20headers,%20and%20data%20structures",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "4feddb",
+        "hash": "2c6209c0",
+        "encoded": "-%20**Edge%20case%20testing**%20for%20invalid%20inputs,%20boundary%20conditions,%20and%20error%20scenarios",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "4feddb",
+        "hash": "2adb4de6",
+        "encoded": "-%20**Performance%20testing**%20for%20response%20times",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "4feddb",
+        "hash": "6a397cf8",
+        "encoded": "-%20**API%20key%20authentication%20testing**",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "4feddb",
+        "hash": "12b76339",
+        "encoded": "-%20**CI/CD%20ready**%20with%20GitHub%20Actions%20integration",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "4feddb",
+        "hash": "6409a835",
+        "encoded": "-%20**Test%20reports**%20with%20coverage%20and%20HTML%20output",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "4feddb",
+        "hash": "979393ad",
+        "encoded": "##%20Prerequisites",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "4feddb",
+        "hash": "188f0066",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "4feddb",
+        "hash": "3e87edf7",
+        "encoded": "#%20Install%20testing%20dependencies",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "4feddb",
+        "hash": "8ebaaf98",
+        "encoded": "pip%20install%20pytest%20pytest-cov%20pytest-html%20requests%20pydantic%20python-dotenv",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "4feddb",
+        "hash": "8d3e4b77",
+        "encoded": "#%20Or%20add%20to%20requirements-test.txt:",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "4feddb",
+        "hash": "03ee2652",
+        "encoded": "cat%20%3E%20requirements-test.txt%20%3C%3C%20EOF",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "4feddb",
+        "hash": "30af24f0",
+        "encoded": "pytest==8.3.4",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "4feddb",
+        "hash": "eeb1d80f",
+        "encoded": "pytest-cov==6.0.0",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "4feddb",
+        "hash": "70abc56f",
+        "encoded": "pytest-html==4.1.1",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "4feddb",
+        "hash": "ba3725d8",
+        "encoded": "requests==2.32.3",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "4feddb",
+        "hash": "8c0c3273",
+        "encoded": "pydantic==2.13.4",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "4feddb",
+        "hash": "9bd23f19",
+        "encoded": "python-dotenv==1.1.1",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "4feddb",
+        "hash": "261baaa2",
+        "encoded": "EOF",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "4feddb",
+        "hash": "15963c0e",
+        "encoded": "pip%20install%20-r%20requirements-test.txt",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "4feddb",
+        "hash": "a355a5c4",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "4feddb",
+        "hash": "89279356",
+        "encoded": "##%20Test%20Structure",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "4feddb",
+        "hash": "ee3aeb44",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "4feddb",
+        "hash": "1f031fa7",
+        "encoded": "tests/",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "4feddb",
+        "hash": "8e1fcd8e",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20__init__.py",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "4feddb",
+        "hash": "71a20570",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20conftest.py%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Pytest%20fixtures%20and%20configuration",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "4feddb",
+        "hash": "124642d7",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20test_health.py%20%20%20%20%20%20%20%20%20%20%20#%20Health%20and%20root%20endpoint%20tests",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "4feddb",
+        "hash": "3c5974c1",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20test_quote.py%20%20%20%20%20%20%20%20%20%20%20%20#%20Quote%20endpoint%20tests",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "4feddb",
+        "hash": "0b7626b5",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20test_candles.py%20%20%20%20%20%20%20%20%20%20#%20Candles%20endpoint%20tests",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "4feddb",
+        "hash": "97878263",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20test_indicators.py%20%20%20%20%20%20%20#%20Technical%20indicators%20tests",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "4feddb",
+        "hash": "d1c17d7b",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20test_news.py%20%20%20%20%20%20%20%20%20%20%20%20%20#%20News%20endpoint%20tests",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "4feddb",
+        "hash": "34979a83",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20test_authentication.py%20%20%20#%20API%20key%20protection%20tests",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "4feddb",
+        "hash": "7ae9cce8",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20test_edge_cases.py%20%20%20%20%20%20%20#%20Error%20handling%20and%20boundary%20tests",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "4feddb",
+        "hash": "c1ae0026",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20test_performance.py%20%20%20%20%20%20#%20Response%20time%20and%20load%20tests",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "4feddb",
+        "hash": "f4180275",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20schemas/",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "4feddb",
+        "hash": "5b328ff4",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20response_schemas.py%20%20#%20Pydantic%20models%20for%20response%20validation",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "4feddb",
+        "hash": "b91fdb39",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "4feddb",
+        "hash": "ad229d1e",
+        "encoded": "##%20Setup",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "4feddb",
+        "hash": "c3722b61",
+        "encoded": "###%201.%20Create%20test%20configuration%20(conftest.py)",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "4feddb",
+        "hash": "449a80e1",
+        "encoded": "%60%60%60python",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "4feddb",
+        "hash": "3be2f262",
+        "encoded": "import%20pytest",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "4feddb",
+        "hash": "9b8ed97b",
+        "encoded": "import%20requests",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "4feddb",
+        "hash": "30252b6c",
+        "encoded": "import%20os",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "4feddb",
+        "hash": "6ec625ef",
+        "encoded": "from%20dotenv%20import%20load_dotenv",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "4feddb",
+        "hash": "cd9ceb66",
+        "encoded": "import%20time",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "4feddb",
+        "hash": "adce0f40",
+        "encoded": "import%20subprocess",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "4feddb",
+        "hash": "5b242aa5",
+        "encoded": "import%20signal",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "4feddb",
+        "hash": "b6017197",
+        "encoded": "load_dotenv()",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "4feddb",
+        "hash": "cb35414e",
+        "encoded": "#%20Test%20configuration",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "4feddb",
+        "hash": "2fa0b6e3",
+        "encoded": "BASE_URL%20=%20os.getenv(%22TEST_BASE_URL%22,%20%22http://localhost:8000%22)",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "4feddb",
+        "hash": "e09a2d18",
+        "encoded": "API_KEY%20=%20os.getenv(%22API_KEY%22,%20None)",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "4feddb",
+        "hash": "1db0a073",
+        "encoded": "TEST_TICKER%20=%20%22AAPL%22",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "4feddb",
+        "hash": "02afaaee",
+        "encoded": "INVALID_TICKER%20=%20%22INVALIDTICKER999%22",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "4feddb",
+        "hash": "474610d7",
+        "encoded": "@pytest.fixture(scope=%22session%22)",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "4feddb",
+        "hash": "00f753be",
+        "encoded": "def%20base_url():",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "4feddb",
+        "hash": "20e32726",
+        "encoded": "%22%22%22Base%20URL%20for%20API%20testing%22%22%22",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "4feddb",
+        "hash": "5269278d",
+        "encoded": "return%20BASE_URL",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "4feddb",
+        "hash": "a2abd22e",
+        "encoded": "@pytest.fixture(scope=%22session%22)",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "4feddb",
+        "hash": "98a84baa",
+        "encoded": "def%20api_key():",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "4feddb",
+        "hash": "977fa757",
+        "encoded": "%22%22%22API%20key%20for%20authentication%20tests%22%22%22",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "4feddb",
+        "hash": "a7f43d8d",
+        "encoded": "return%20API_KEY",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "4feddb",
+        "hash": "9808086a",
+        "encoded": "@pytest.fixture(scope=%22session%22)",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "4feddb",
+        "hash": "06e464c8",
+        "encoded": "def%20test_ticker():",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "4feddb",
+        "hash": "ed3f2355",
+        "encoded": "%22%22%22Valid%20ticker%20symbol%20for%20testing%22%22%22",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "4feddb",
+        "hash": "c6128eb2",
+        "encoded": "return%20TEST_TICKER",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "4feddb",
+        "hash": "a0105124",
+        "encoded": "@pytest.fixture(scope=%22session%22)",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "4feddb",
+        "hash": "2423cb6e",
+        "encoded": "def%20invalid_ticker():",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "4feddb",
+        "hash": "d5166c63",
+        "encoded": "%22%22%22Invalid%20ticker%20for%20error%20testing%22%22%22",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "4feddb",
+        "hash": "3beb9aa5",
+        "encoded": "return%20INVALID_TICKER",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "4feddb",
+        "hash": "987d28e3",
+        "encoded": "@pytest.fixture(scope=%22session%22)",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "4feddb",
+        "hash": "eb89dbd3",
+        "encoded": "def%20http_client():",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "4feddb",
+        "hash": "41e8b9ed",
+        "encoded": "%22%22%22Reusable%20HTTP%20client%20with%20session%22%22%22",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "4feddb",
+        "hash": "65ef46cf",
+        "encoded": "session%20=%20requests.Session()",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "4feddb",
+        "hash": "14dc14af",
+        "encoded": "session.headers.update(%7B%22User-Agent%22:%20%22yfinance-api-test-suite/1.0%22%7D)",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "4feddb",
+        "hash": "9d7d4182",
+        "encoded": "yield%20session",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "4feddb",
+        "hash": "3824bb60",
+        "encoded": "session.close()",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "4feddb",
+        "hash": "c6211c63",
+        "encoded": "@pytest.fixture(scope=%22session%22,%20autouse=True)",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "4feddb",
+        "hash": "fdc4a6ad",
+        "encoded": "def%20start_server():",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "4feddb",
+        "hash": "3da84bab",
+        "encoded": "%22%22%22Start%20the%20FastAPI%20server%20for%20testing%20(optional%20-%20use%20if%20testing%20locally)%22%22%22",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "4feddb",
+        "hash": "5e0be5c4",
+        "encoded": "#%20Only%20start%20server%20if%20running%20locally%20and%20not%20already%20running",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "4feddb",
+        "hash": "8cf6f62a",
+        "encoded": "if%20%22localhost%22%20in%20BASE_URL%20or%20%22127.0.0.1%22%20in%20BASE_URL:",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "4feddb",
+        "hash": "358df0ff",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "4feddb",
+        "hash": "54b3bcaa",
+        "encoded": "#%20Check%20if%20server%20is%20already%20running",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "4feddb",
+        "hash": "dc0b3172",
+        "encoded": "response%20=%20requests.get(f%22%7BBASE_URL%7D/health%22,%20timeout=2)",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "4feddb",
+        "hash": "913c6295",
+        "encoded": "if%20response.status_code%20==%20200:",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "4feddb",
+        "hash": "ee144b94",
+        "encoded": "print(f%22%5Cn%E2%9C%93%20Server%20already%20running%20at%20%7BBASE_URL%7D%22)",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "4feddb",
+        "hash": "f7ff50e9",
+        "encoded": "yield",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "4feddb",
+        "hash": "654425e7",
+        "encoded": "return",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "4feddb",
+        "hash": "f3f9515b",
+        "encoded": "except%20requests.exceptions.RequestException:",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "4feddb",
+        "hash": "1365054e",
+        "encoded": "pass",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "4feddb",
+        "hash": "53cf61c6",
+        "encoded": "#%20Start%20server",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "4feddb",
+        "hash": "436c89ba",
+        "encoded": "print(f%22%5Cn%E2%86%92%20Starting%20server%20at%20%7BBASE_URL%7D...%22)",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "4feddb",
+        "hash": "94bcc8f8",
+        "encoded": "port%20=%20BASE_URL.split(%22:%22)%5B-1%5D",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "4feddb",
+        "hash": "4a699e0e",
+        "encoded": "process%20=%20subprocess.Popen(",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "4feddb",
+        "hash": "8dc2317d",
+        "encoded": "%5B%22uvicorn%22,%20%22app.main:app%22,%20%22--host%22,%20%220.0.0.0%22,%20%22--port%22,%20port%5D,",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "4feddb",
+        "hash": "8cfee490",
+        "encoded": "stdout=subprocess.PIPE,",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "4feddb",
+        "hash": "f50a3906",
+        "encoded": "stderr=subprocess.PIPE",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "4feddb",
+        "hash": "62712bc7",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "4feddb",
+        "hash": "40dccd98",
+        "encoded": "#%20Wait%20for%20server%20to%20be%20ready",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "4feddb",
+        "hash": "46a06be9",
+        "encoded": "max_retries%20=%2030",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "4feddb",
+        "hash": "5e160f96",
+        "encoded": "for%20i%20in%20range(max_retries):",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "4feddb",
+        "hash": "e88b739a",
+        "encoded": "try:",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "4feddb",
+        "hash": "f9c7b33b",
+        "encoded": "response%20=%20requests.get(f%22%7BBASE_URL%7D/health%22,%20timeout=1)",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "4feddb",
+        "hash": "8f3b7d0c",
+        "encoded": "if%20response.status_code%20==%20200:",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "4feddb",
+        "hash": "5c6bec58",
+        "encoded": "print(f%22%E2%9C%93%20Server%20started%20successfully%22)",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "4feddb",
+        "hash": "0ee833ff",
+        "encoded": "break",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "4feddb",
+        "hash": "fd86f25d",
+        "encoded": "except%20requests.exceptions.RequestException:",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "4feddb",
+        "hash": "77872ff5",
+        "encoded": "time.sleep(1)",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "4feddb",
+        "hash": "657ee5d2",
+        "encoded": "else:",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "4feddb",
+        "hash": "d013dec7",
+        "encoded": "process.kill()",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "4feddb",
+        "hash": "dba51d88",
+        "encoded": "raise%20RuntimeError(%22Server%20failed%20to%20start%20within%2030%20seconds%22)",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "4feddb",
+        "hash": "6bd58e81",
+        "encoded": "yield",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "4feddb",
+        "hash": "f57781df",
+        "encoded": "#%20Teardown",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "4feddb",
+        "hash": "a167d34a",
+        "encoded": "print(%22%5Cn%E2%86%92%20Stopping%20server...%22)",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "4feddb",
+        "hash": "207520c3",
+        "encoded": "process.send_signal(signal.SIGTERM)",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "4feddb",
+        "hash": "996f5dd8",
+        "encoded": "process.wait(timeout=5)",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "4feddb",
+        "hash": "8b2c144f",
+        "encoded": "else:",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "4feddb",
+        "hash": "0e4caa3b",
+        "encoded": "#%20Remote%20server%20-%20no%20setup%20needed",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "4feddb",
+        "hash": "ece0452e",
+        "encoded": "yield",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "4feddb",
+        "hash": "17346fad",
+        "encoded": "def%20pytest_configure(config):",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "4feddb",
+        "hash": "52e01538",
+        "encoded": "%22%22%22Configure%20pytest%20with%20custom%20markers%22%22%22",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "4feddb",
+        "hash": "6f234b91",
+        "encoded": "config.addinivalue_line(",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "4feddb",
+        "hash": "352eb529",
+        "encoded": "%22markers%22,%20%22smoke:%20mark%20test%20as%20smoke%20test%20for%20quick%20validation%22",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "4feddb",
+        "hash": "b64c4b34",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "4feddb",
+        "hash": "7fae66ec",
+        "encoded": "config.addinivalue_line(",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "4feddb",
+        "hash": "eccd85dd",
+        "encoded": "%22markers%22,%20%22integration:%20mark%20test%20as%20integration%20test%22",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "4feddb",
+        "hash": "47b98f1e",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "4feddb",
+        "hash": "4ef08531",
+        "encoded": "config.addinivalue_line(",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "4feddb",
+        "hash": "9a251057",
+        "encoded": "%22markers%22,%20%22performance:%20mark%20test%20as%20performance%20test%22",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "4feddb",
+        "hash": "dd2ab5e3",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "4feddb",
+        "hash": "7e6d8ff4",
+        "encoded": "config.addinivalue_line(",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "4feddb",
+        "hash": "35a2bce6",
+        "encoded": "%22markers%22,%20%22edge_case:%20mark%20test%20as%20edge%20case%20validation%22",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "4feddb",
+        "hash": "8e5dac78",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "4feddb",
+        "hash": "849c0d36",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "4feddb",
+        "hash": "e364768f",
+        "encoded": "###%202.%20Create%20response%20schema%20validators%20(tests/schemas/response_schemas.py)",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "4feddb",
+        "hash": "2aa7bc75",
+        "encoded": "%60%60%60python",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "4feddb",
+        "hash": "b1af71bd",
+        "encoded": "from%20pydantic%20import%20BaseModel,%20Field,%20field_validator",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "4feddb",
+        "hash": "647370aa",
+        "encoded": "from%20typing%20import%20Optional,%20List,%20Dict,%20Any",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "4feddb",
+        "hash": "283ccc23",
+        "encoded": "from%20datetime%20import%20datetime",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "4feddb",
+        "hash": "ddd09685",
+        "encoded": "class%20HealthResponse(BaseModel):",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "4feddb",
+        "hash": "15769f21",
+        "encoded": "status:%20str",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "4feddb",
+        "hash": "9f430836",
+        "encoded": "class%20RootResponse(BaseModel):",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "4feddb",
+        "hash": "7bb76cf7",
+        "encoded": "message:%20str",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "4feddb",
+        "hash": "48a44f44",
+        "encoded": "endpoints:%20List%5Bstr%5D",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "4feddb",
+        "hash": "f3d5d83c",
+        "encoded": "class%20QuoteResponse(BaseModel):",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "4feddb",
+        "hash": "ed4c9e44",
+        "encoded": "symbol:%20str",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "4feddb",
+        "hash": "32837af6",
+        "encoded": "price:%20float",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "4feddb",
+        "hash": "425c9fed",
+        "encoded": "currency:%20Optional%5Bstr%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "4feddb",
+        "hash": "a62c7ac4",
+        "encoded": "timestamp:%20Optional%5Bstr%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "4feddb",
+        "hash": "70e53e04",
+        "encoded": "@field_validator('price')",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "4feddb",
+        "hash": "b78ff8c0",
+        "encoded": "@classmethod",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "4feddb",
+        "hash": "e50b646a",
+        "encoded": "def%20price_must_be_positive(cls,%20v):",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "4feddb",
+        "hash": "0bd7fbb9",
+        "encoded": "if%20v%20%3C=%200:",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "4feddb",
+        "hash": "3fda413a",
+        "encoded": "raise%20ValueError('Price%20must%20be%20positive')",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "4feddb",
+        "hash": "0162c422",
+        "encoded": "return%20v",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "4feddb",
+        "hash": "abc830f7",
+        "encoded": "class%20CandleData(BaseModel):",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "4feddb",
+        "hash": "a5c909b0",
+        "encoded": "date:%20str",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "4feddb",
+        "hash": "f5440631",
+        "encoded": "open:%20float",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "4feddb",
+        "hash": "466c831d",
+        "encoded": "high:%20float",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "4feddb",
+        "hash": "303cec93",
+        "encoded": "low:%20float",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "4feddb",
+        "hash": "0ae40ffc",
+        "encoded": "close:%20float",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "4feddb",
+        "hash": "fa40de29",
+        "encoded": "volume:%20int",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "4feddb",
+        "hash": "17f56b38",
+        "encoded": "@field_validator('open',%20'high',%20'low',%20'close')",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "4feddb",
+        "hash": "6da5d894",
+        "encoded": "@classmethod",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "4feddb",
+        "hash": "dcbbc6d3",
+        "encoded": "def%20prices_must_be_positive(cls,%20v):",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "4feddb",
+        "hash": "8f04f315",
+        "encoded": "if%20v%20%3C=%200:",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "4feddb",
+        "hash": "87c96a77",
+        "encoded": "raise%20ValueError('Prices%20must%20be%20positive')",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "4feddb",
+        "hash": "754a8d73",
+        "encoded": "return%20v",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "4feddb",
+        "hash": "1d61c87b",
+        "encoded": "class%20CandlesResponse(BaseModel):",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "4feddb",
+        "hash": "6568a4a2",
+        "encoded": "symbol:%20str",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "4feddb",
+        "hash": "6d2b83ad",
+        "encoded": "candles:%20List%5BCandleData%5D",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "4feddb",
+        "hash": "2d8db995",
+        "encoded": "class%20IndicatorData(BaseModel):",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "4feddb",
+        "hash": "d2a46074",
+        "encoded": "date:%20str",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "4feddb",
+        "hash": "3b3541ad",
+        "encoded": "rsi:%20Optional%5Bfloat%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "4feddb",
+        "hash": "a67d772c",
+        "encoded": "macd:%20Optional%5Bfloat%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "4feddb",
+        "hash": "6f8a6ffc",
+        "encoded": "macd_signal:%20Optional%5Bfloat%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "4feddb",
+        "hash": "2a479859",
+        "encoded": "macd_histogram:%20Optional%5Bfloat%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "4feddb",
+        "hash": "e708119f",
+        "encoded": "bb_upper:%20Optional%5Bfloat%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "4feddb",
+        "hash": "7d46fc1f",
+        "encoded": "bb_middle:%20Optional%5Bfloat%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "4feddb",
+        "hash": "f0390f23",
+        "encoded": "bb_lower:%20Optional%5Bfloat%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "4feddb",
+        "hash": "c2d912b0",
+        "encoded": "adx:%20Optional%5Bfloat%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "4feddb",
+        "hash": "b3d7e642",
+        "encoded": "atr:%20Optional%5Bfloat%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "4feddb",
+        "hash": "f62b4e01",
+        "encoded": "sma_50:%20Optional%5Bfloat%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "4feddb",
+        "hash": "fce88ffb",
+        "encoded": "class%20IndicatorsResponse(BaseModel):",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "4feddb",
+        "hash": "ab23ece9",
+        "encoded": "symbol:%20str",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "4feddb",
+        "hash": "273cc0e8",
+        "encoded": "indicators:%20List%5BIndicatorData%5D",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "4feddb",
+        "hash": "75583e8d",
+        "encoded": "class%20NewsItem(BaseModel):",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "4feddb",
+        "hash": "2e503084",
+        "encoded": "title:%20str",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "4feddb",
+        "hash": "2c6dded1",
+        "encoded": "link:%20Optional%5Bstr%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "4feddb",
+        "hash": "d47a24f4",
+        "encoded": "published:%20Optional%5Bstr%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "4feddb",
+        "hash": "18de9166",
+        "encoded": "source:%20Optional%5Bstr%5D%20=%20None",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "4feddb",
+        "hash": "99321a80",
+        "encoded": "class%20NewsResponse(BaseModel):",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "4feddb",
+        "hash": "6cae3ce6",
+        "encoded": "symbol:%20str",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "4feddb",
+        "hash": "93444cda",
+        "encoded": "news:%20List%5BNewsItem%5D",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "4feddb",
+        "hash": "66935af3",
+        "encoded": "class%20ErrorResponse(BaseModel):",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "4feddb",
+        "hash": "d7c17beb",
+        "encoded": "detail:%20str",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "4feddb",
+        "hash": "09225009",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "4feddb",
+        "hash": "eaea6352",
+        "encoded": "###%203.%20Health%20and%20Root%20Endpoint%20Tests%20(tests/test_health.py)",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "4feddb",
+        "hash": "c8020dbe",
+        "encoded": "%60%60%60python",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "4feddb",
+        "hash": "d119b21b",
+        "encoded": "import%20pytest",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "4feddb",
+        "hash": "22818dac",
+        "encoded": "from%20tests.schemas.response_schemas%20import%20HealthResponse,%20RootResponse",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "4feddb",
+        "hash": "979392ac",
+        "encoded": "@pytest.mark.smoke",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "4feddb",
+        "hash": "adadf409",
+        "encoded": "class%20TestHealthEndpoint:",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "4feddb",
+        "hash": "e650635d",
+        "encoded": "%22%22%22Test%20suite%20for%20health%20check%20endpoint%22%22%22",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "4feddb",
+        "hash": "642a4781",
+        "encoded": "def%20test_health_status_code(self,%20http_client,%20base_url):",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "4feddb",
+        "hash": "afccd53b",
+        "encoded": "%22%22%22Health%20endpoint%20should%20return%20200%20OK%22%22%22",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "4feddb",
+        "hash": "bcf7c179",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/health%22)",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "4feddb",
+        "hash": "f25046b6",
+        "encoded": "assert%20response.status_code%20==%20200,%20f%22Expected%20200,%20got%20%7Bresponse.status_code%7D%22",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "4feddb",
+        "hash": "a0f6c8f3",
+        "encoded": "def%20test_health_response_structure(self,%20http_client,%20base_url):",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "4feddb",
+        "hash": "f84d5db3",
+        "encoded": "%22%22%22Health%20endpoint%20should%20return%20valid%20JSON%20structure%22%22%22",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "4feddb",
+        "hash": "741d0027",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/health%22)",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "4feddb",
+        "hash": "50cc4dd5",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "4feddb",
+        "hash": "2f812424",
+        "encoded": "#%20Validate%20using%20Pydantic",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "4feddb",
+        "hash": "32ec4f90",
+        "encoded": "health%20=%20HealthResponse(**data)",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "4feddb",
+        "hash": "903b4fe7",
+        "encoded": "assert%20health.status%20==%20%22ok%22",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "4feddb",
+        "hash": "131117f2",
+        "encoded": "def%20test_health_response_time(self,%20http_client,%20base_url):",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "4feddb",
+        "hash": "db538aad",
+        "encoded": "%22%22%22Health%20endpoint%20should%20respond%20within%201%20second%22%22%22",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "4feddb",
+        "hash": "58de08c7",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/health%22)",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "4feddb",
+        "hash": "6742f86d",
+        "encoded": "assert%20response.elapsed.total_seconds()%20%3C%201.0",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "4feddb",
+        "hash": "3b1f848a",
+        "encoded": "def%20test_health_headers(self,%20http_client,%20base_url):",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "4feddb",
+        "hash": "b76c0d04",
+        "encoded": "%22%22%22Health%20endpoint%20should%20return%20correct%20content-type%22%22%22",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "4feddb",
+        "hash": "e1b38c16",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/health%22)",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "4feddb",
+        "hash": "f593e81f",
+        "encoded": "assert%20%22application/json%22%20in%20response.headers.get(%22content-type%22,%20%22%22)",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "4feddb",
+        "hash": "b2d782db",
+        "encoded": "@pytest.mark.smoke",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "4feddb",
+        "hash": "a3d7734b",
+        "encoded": "class%20TestRootEndpoint:",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "4feddb",
+        "hash": "7a678975",
+        "encoded": "%22%22%22Test%20suite%20for%20root%20endpoint%22%22%22",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "4feddb",
+        "hash": "5542cdd6",
+        "encoded": "def%20test_root_status_code(self,%20http_client,%20base_url):",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "4feddb",
+        "hash": "80d0f107",
+        "encoded": "%22%22%22Root%20endpoint%20should%20return%20200%20OK%22%22%22",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "4feddb",
+        "hash": "2decb7de",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/%22)",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "4feddb",
+        "hash": "420b9c64",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "4feddb",
+        "hash": "5e36e3ad",
+        "encoded": "def%20test_root_response_structure(self,%20http_client,%20base_url):",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "4feddb",
+        "hash": "7321c389",
+        "encoded": "%22%22%22Root%20endpoint%20should%20list%20all%20available%20endpoints%22%22%22",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "4feddb",
+        "hash": "4d00261b",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/%22)",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "4feddb",
+        "hash": "8b5140a0",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "4feddb",
+        "hash": "dce9dd0e",
+        "encoded": "#%20Validate%20structure",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "4feddb",
+        "hash": "e255e005",
+        "encoded": "root%20=%20RootResponse(**data)",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "4feddb",
+        "hash": "c6f81983",
+        "encoded": "assert%20len(root.endpoints)%20%3E%200",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "4feddb",
+        "hash": "75149108",
+        "encoded": "#%20Check%20for%20expected%20endpoints",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "4feddb",
+        "hash": "5206d7fe",
+        "encoded": "expected_endpoints%20=%20%5B%22/health%22,%20%22/quote%22,%20%22/candles%22,%20%22/indicators%22,%20%22/news%22%5D",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "4feddb",
+        "hash": "3a864152",
+        "encoded": "for%20endpoint%20in%20expected_endpoints:",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "4feddb",
+        "hash": "8110e579",
+        "encoded": "assert%20any(endpoint%20in%20e%20for%20e%20in%20root.endpoints),%20f%22Missing%20%7Bendpoint%7D%22",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "4feddb",
+        "hash": "71510c29",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "4feddb",
+        "hash": "e156fc8d",
+        "encoded": "###%204.%20Quote%20Endpoint%20Tests%20(tests/test_quote.py)",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "4feddb",
+        "hash": "a2e8f2d4",
+        "encoded": "%60%60%60python",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "4feddb",
+        "hash": "695955ec",
+        "encoded": "import%20pytest",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "4feddb",
+        "hash": "87cbe33b",
+        "encoded": "from%20tests.schemas.response_schemas%20import%20QuoteResponse,%20ErrorResponse",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "4feddb",
+        "hash": "bf0cf360",
+        "encoded": "@pytest.mark.integration",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "4feddb",
+        "hash": "7fd33358",
+        "encoded": "class%20TestQuoteEndpoint:",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "4feddb",
+        "hash": "1b8651d4",
+        "encoded": "%22%22%22Test%20suite%20for%20quote%20endpoint%22%22%22",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "4feddb",
+        "hash": "4535b554",
+        "encoded": "def%20test_quote_valid_ticker(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "4feddb",
+        "hash": "d145a4bf",
+        "encoded": "%22%22%22Quote%20endpoint%20should%20return%20valid%20data%20for%20known%20ticker%22%22%22",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "4feddb",
+        "hash": "6a25a77e",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/quote/%7Btest_ticker%7D%22)",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "4feddb",
+        "hash": "73967713",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "4feddb",
+        "hash": "906a14c1",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "4feddb",
+        "hash": "0a4a35c8",
+        "encoded": "quote%20=%20QuoteResponse(**data)",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "4feddb",
+        "hash": "3144526b",
+        "encoded": "assert%20quote.symbol%20==%20test_ticker",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "4feddb",
+        "hash": "63210102",
+        "encoded": "assert%20quote.price%20%3E%200",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "4feddb",
+        "hash": "3ff9f586",
+        "encoded": "@pytest.mark.parametrize(%22ticker%22,%20%5B%22AAPL%22,%20%22MSFT%22,%20%22GOOGL%22,%20%22TSLA%22,%20%22AMZN%22%5D)",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "4feddb",
+        "hash": "73a8b11d",
+        "encoded": "def%20test_quote_multiple_tickers(self,%20http_client,%20base_url,%20ticker):",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "4feddb",
+        "hash": "d03e4507",
+        "encoded": "%22%22%22Quote%20endpoint%20should%20work%20for%20multiple%20valid%20tickers%22%22%22",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "4feddb",
+        "hash": "df164d59",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/quote/%7Bticker%7D%22)",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "4feddb",
+        "hash": "18335691",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "4feddb",
+        "hash": "45d7ad2c",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "4feddb",
+        "hash": "873d1557",
+        "encoded": "quote%20=%20QuoteResponse(**data)",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "4feddb",
+        "hash": "bc76b801",
+        "encoded": "assert%20quote.symbol%20==%20ticker",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "4feddb",
+        "hash": "d5fedda7",
+        "encoded": "def%20test_quote_invalid_ticker(self,%20http_client,%20base_url,%20invalid_ticker):",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "4feddb",
+        "hash": "b1ad2423",
+        "encoded": "%22%22%22Quote%20endpoint%20should%20return%20404%20for%20invalid%20ticker%22%22%22",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "4feddb",
+        "hash": "f86aba2f",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/quote/%7Binvalid_ticker%7D%22)",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "4feddb",
+        "hash": "67e7e8f1",
+        "encoded": "assert%20response.status_code%20==%20404",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "4feddb",
+        "hash": "584f55a6",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "4feddb",
+        "hash": "52ce49b9",
+        "encoded": "error%20=%20ErrorResponse(**data)",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "4feddb",
+        "hash": "0b176834",
+        "encoded": "assert%20%22detail%22%20in%20data",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "4feddb",
+        "hash": "ad77cfb0",
+        "encoded": "@pytest.mark.edge_case",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "4feddb",
+        "hash": "38dcd5a2",
+        "encoded": "def%20test_quote_case_sensitivity(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "4feddb",
+        "hash": "bd464d0c",
+        "encoded": "%22%22%22Quote%20endpoint%20should%20handle%20case%20variations%22%22%22",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "4feddb",
+        "hash": "3bfb6759",
+        "encoded": "#%20Test%20lowercase",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "4feddb",
+        "hash": "77a6e713",
+        "encoded": "response_lower%20=%20http_client.get(f%22%7Bbase_url%7D/quote/%7Btest_ticker.lower()%7D%22)",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "4feddb",
+        "hash": "23616dea",
+        "encoded": "#%20Test%20uppercase%20(should%20work)",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "4feddb",
+        "hash": "7e143e5f",
+        "encoded": "response_upper%20=%20http_client.get(f%22%7Bbase_url%7D/quote/%7Btest_ticker.upper()%7D%22)",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "4feddb",
+        "hash": "8db3c94e",
+        "encoded": "assert%20response_upper.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "4feddb",
+        "hash": "ac21cd23",
+        "encoded": "@pytest.mark.edge_case",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "4feddb",
+        "hash": "45158322",
+        "encoded": "@pytest.mark.parametrize(%22invalid_symbol%22,%20%5B%22%22,%20%22%20%22,%20%22123%22,%20%22!@#%22,%20%22A%22%20*%20100%5D)",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "4feddb",
+        "hash": "2d722a12",
+        "encoded": "def%20test_quote_malformed_symbols(self,%20http_client,%20base_url,%20invalid_symbol):",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "4feddb",
+        "hash": "f52b03a3",
+        "encoded": "%22%22%22Quote%20endpoint%20should%20handle%20malformed%20symbols%20gracefully%22%22%22",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "4feddb",
+        "hash": "11fc5003",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/quote/%7Binvalid_symbol%7D%22)",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "4feddb",
+        "hash": "f11e28d2",
+        "encoded": "#%20Should%20return%20either%20404%20or%20422",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "4feddb",
+        "hash": "a21315cd",
+        "encoded": "assert%20response.status_code%20in%20%5B404,%20422%5D",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "4feddb",
+        "hash": "588b213e",
+        "encoded": "@pytest.mark.performance",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "4feddb",
+        "hash": "c8764aa4",
+        "encoded": "def%20test_quote_response_time(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "4feddb",
+        "hash": "6ffd1bbf",
+        "encoded": "%22%22%22Quote%20endpoint%20should%20respond%20within%205%20seconds%22%22%22",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "4feddb",
+        "hash": "b0178eeb",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/quote/%7Btest_ticker%7D%22)",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "4feddb",
+        "hash": "922c0c93",
+        "encoded": "assert%20response.elapsed.total_seconds()%20%3C%205.0",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "4feddb",
+        "hash": "f5d90367",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "4feddb",
+        "hash": "f3a6cabb",
+        "encoded": "###%205.%20Candles%20Endpoint%20Tests%20(tests/test_candles.py)",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "4feddb",
+        "hash": "5fabd3d9",
+        "encoded": "%60%60%60python",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "4feddb",
+        "hash": "38f9cad0",
+        "encoded": "import%20pytest",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "4feddb",
+        "hash": "309f1dd6",
+        "encoded": "from%20tests.schemas.response_schemas%20import%20CandlesResponse",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "4feddb",
+        "hash": "eb72989f",
+        "encoded": "@pytest.mark.integration",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "4feddb",
+        "hash": "e6b0b6fb",
+        "encoded": "class%20TestCandlesEndpoint:",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "4feddb",
+        "hash": "e145af9d",
+        "encoded": "%22%22%22Test%20suite%20for%20candles%20endpoint%22%22%22",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "4feddb",
+        "hash": "3b5ce9f3",
+        "encoded": "def%20test_candles_default_days(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "4feddb",
+        "hash": "f4a1d443",
+        "encoded": "%22%22%22Candles%20endpoint%20should%20return%20data%20with%20default%20days%20parameter%22%22%22",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "4feddb",
+        "hash": "c922dafb",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/candles/%7Btest_ticker%7D%22)",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "4feddb",
+        "hash": "7be8fbbd",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "4feddb",
+        "hash": "2c572bd1",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "384": {
+        "chunkId": "4feddb",
+        "hash": "3adf7c13",
+        "encoded": "candles%20=%20CandlesResponse(**data)",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "4feddb",
+        "hash": "fed718cf",
+        "encoded": "assert%20candles.symbol%20==%20test_ticker",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "4feddb",
+        "hash": "186de02e",
+        "encoded": "assert%20len(candles.candles)%20%3E%200",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "4feddb",
+        "hash": "0f74080f",
+        "encoded": "@pytest.mark.parametrize(%22days%22,%20%5B5,%2010,%2030,%2060,%2090,%20180,%20365%5D)",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "4feddb",
+        "hash": "11e60f0b",
+        "encoded": "def%20test_candles_various_periods(self,%20http_client,%20base_url,%20test_ticker,%20days):",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "4feddb",
+        "hash": "426aef5b",
+        "encoded": "%22%22%22Candles%20endpoint%20should%20work%20with%20various%20day%20parameters%22%22%22",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "4feddb",
+        "hash": "500bd1ae",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/candles/%7Btest_ticker%7D%22,%20params=%7B%22days%22:%20days%7D)",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "4feddb",
+        "hash": "1801e464",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "4feddb",
+        "hash": "b4e0949b",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "4feddb",
+        "hash": "dad78dcd",
+        "encoded": "candles%20=%20CandlesResponse(**data)",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "4feddb",
+        "hash": "7155f6d8",
+        "encoded": "assert%20len(candles.candles)%20%3E%200",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "4feddb",
+        "hash": "786fe73a",
+        "encoded": "@pytest.mark.edge_case",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "4feddb",
+        "hash": "1d1986f9",
+        "encoded": "def%20test_candles_minimum_days(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "4feddb",
+        "hash": "e861918d",
+        "encoded": "%22%22%22Candles%20endpoint%20should%20handle%20minimum%20days%20boundary%20(5)%22%22%22",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "4feddb",
+        "hash": "533dcc7f",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/candles/%7Btest_ticker%7D%22,%20params=%7B%22days%22:%205%7D)",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "4feddb",
+        "hash": "a7642efc",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "4feddb",
+        "hash": "6f3af1da",
+        "encoded": "@pytest.mark.edge_case",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "4feddb",
+        "hash": "f23466f3",
+        "encoded": "def%20test_candles_maximum_days(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "4feddb",
+        "hash": "caec6762",
+        "encoded": "%22%22%22Candles%20endpoint%20should%20handle%20maximum%20days%20boundary%20(365)%22%22%22",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "4feddb",
+        "hash": "943695e6",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/candles/%7Btest_ticker%7D%22,%20params=%7B%22days%22:%20365%7D)",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "4feddb",
+        "hash": "f891e81c",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "4feddb",
+        "hash": "9845ee58",
+        "encoded": "@pytest.mark.edge_case",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "4feddb",
+        "hash": "5dbcd113",
+        "encoded": "@pytest.mark.parametrize(%22invalid_days%22,%20%5B0,%20-1,%204,%20366,%201000%5D)",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "4feddb",
+        "hash": "2bb009bd",
+        "encoded": "def%20test_candles_invalid_days(self,%20http_client,%20base_url,%20test_ticker,%20invalid_days):",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "4feddb",
+        "hash": "6ad613db",
+        "encoded": "%22%22%22Candles%20endpoint%20should%20reject%20out-of-range%20days%20parameter%22%22%22",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "4feddb",
+        "hash": "83e76dbe",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/candles/%7Btest_ticker%7D%22,%20params=%7B%22days%22:%20invalid_days%7D)",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "4feddb",
+        "hash": "454a7d83",
+        "encoded": "assert%20response.status_code%20==%20422",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "4feddb",
+        "hash": "179ec12f",
+        "encoded": "def%20test_candles_data_integrity(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "4feddb",
+        "hash": "eb831961",
+        "encoded": "%22%22%22Candles%20should%20have%20valid%20OHLCV%20data%20with%20proper%20relationships%22%22%22",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "4feddb",
+        "hash": "49d2c92c",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/candles/%7Btest_ticker%7D%22,%20params=%7B%22days%22:%2010%7D)",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "4feddb",
+        "hash": "7475c8e1",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "4feddb",
+        "hash": "c71e6934",
+        "encoded": "candles%20=%20CandlesResponse(**data)",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "4feddb",
+        "hash": "7d82b3a4",
+        "encoded": "for%20candle%20in%20candles.candles:",
+        "prevChunkIds": []
+      },
+      "425": {
+        "chunkId": "4feddb",
+        "hash": "a23c0c2c",
+        "encoded": "#%20High%20should%20be%20%3E=%20Low",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "4feddb",
+        "hash": "7330c342",
+        "encoded": "assert%20candle.high%20%3E=%20candle.low,%20%22High%20must%20be%20%3E=%20Low%22",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "4feddb",
+        "hash": "0332469c",
+        "encoded": "#%20High%20should%20be%20%3E=%20Open%20and%20Close",
+        "prevChunkIds": []
+      },
+      "428": {
+        "chunkId": "4feddb",
+        "hash": "d0f432d4",
+        "encoded": "assert%20candle.high%20%3E=%20candle.open,%20%22High%20must%20be%20%3E=%20Open%22",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "4feddb",
+        "hash": "64d632cb",
+        "encoded": "assert%20candle.high%20%3E=%20candle.close,%20%22High%20must%20be%20%3E=%20Close%22",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "4feddb",
+        "hash": "3dfd7b8f",
+        "encoded": "#%20Low%20should%20be%20%3C=%20Open%20and%20Close",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "4feddb",
+        "hash": "dd504dab",
+        "encoded": "assert%20candle.low%20%3C=%20candle.open,%20%22Low%20must%20be%20%3C=%20Open%22",
+        "prevChunkIds": []
+      },
+      "432": {
+        "chunkId": "4feddb",
+        "hash": "5fb64931",
+        "encoded": "assert%20candle.low%20%3C=%20candle.close,%20%22Low%20must%20be%20%3C=%20Close%22",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "4feddb",
+        "hash": "4422a3cd",
+        "encoded": "#%20Volume%20should%20be%20non-negative",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "4feddb",
+        "hash": "08db2571",
+        "encoded": "assert%20candle.volume%20%3E=%200,%20%22Volume%20must%20be%20non-negative%22",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "4feddb",
+        "hash": "eaa997a1",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "437": {
+        "chunkId": "4feddb",
+        "hash": "7bbaabf2",
+        "encoded": "###%206.%20Indicators%20Endpoint%20Tests%20(tests/test_indicators.py)",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "4feddb",
+        "hash": "86e3a613",
+        "encoded": "%60%60%60python",
+        "prevChunkIds": []
+      },
+      "440": {
+        "chunkId": "4feddb",
+        "hash": "32817045",
+        "encoded": "import%20pytest",
+        "prevChunkIds": []
+      },
+      "441": {
+        "chunkId": "4feddb",
+        "hash": "afc4de3d",
+        "encoded": "from%20tests.schemas.response_schemas%20import%20IndicatorsResponse",
+        "prevChunkIds": []
+      },
+      "443": {
+        "chunkId": "4feddb",
+        "hash": "af2069d1",
+        "encoded": "@pytest.mark.integration",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "4feddb",
+        "hash": "f7d9f938",
+        "encoded": "class%20TestIndicatorsEndpoint:",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "4feddb",
+        "hash": "32551dd1",
+        "encoded": "%22%22%22Test%20suite%20for%20technical%20indicators%20endpoint%22%22%22",
+        "prevChunkIds": []
+      },
+      "447": {
+        "chunkId": "4feddb",
+        "hash": "37422297",
+        "encoded": "def%20test_indicators_default_tail(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "448": {
+        "chunkId": "4feddb",
+        "hash": "3b140982",
+        "encoded": "%22%22%22Indicators%20endpoint%20should%20return%20data%20with%20default%20tail%22%22%22",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "4feddb",
+        "hash": "96051e84",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/indicators/%7Btest_ticker%7D%22)",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "4feddb",
+        "hash": "eab8874c",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "452": {
+        "chunkId": "4feddb",
+        "hash": "50c409ae",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "453": {
+        "chunkId": "4feddb",
+        "hash": "26b0458e",
+        "encoded": "indicators%20=%20IndicatorsResponse(**data)",
+        "prevChunkIds": []
+      },
+      "455": {
+        "chunkId": "4feddb",
+        "hash": "5c41014b",
+        "encoded": "assert%20indicators.symbol%20==%20test_ticker",
+        "prevChunkIds": []
+      },
+      "456": {
+        "chunkId": "4feddb",
+        "hash": "fb01c580",
+        "encoded": "assert%20len(indicators.indicators)%20%3E%200",
+        "prevChunkIds": []
+      },
+      "458": {
+        "chunkId": "4feddb",
+        "hash": "d5d66742",
+        "encoded": "@pytest.mark.parametrize(%22tail%22,%20%5B1,%205,%2010,%2015,%2030%5D)",
+        "prevChunkIds": []
+      },
+      "459": {
+        "chunkId": "4feddb",
+        "hash": "f59567ac",
+        "encoded": "def%20test_indicators_various_tails(self,%20http_client,%20base_url,%20test_ticker,%20tail):",
+        "prevChunkIds": []
+      },
+      "460": {
+        "chunkId": "4feddb",
+        "hash": "fd342085",
+        "encoded": "%22%22%22Indicators%20endpoint%20should%20work%20with%20various%20tail%20parameters%22%22%22",
+        "prevChunkIds": []
+      },
+      "461": {
+        "chunkId": "4feddb",
+        "hash": "21620818",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/indicators/%7Btest_ticker%7D%22,%20params=%7B%22tail%22:%20tail%7D)",
+        "prevChunkIds": []
+      },
+      "462": {
+        "chunkId": "4feddb",
+        "hash": "621de3ad",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "464": {
+        "chunkId": "4feddb",
+        "hash": "53f1d3b8",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "465": {
+        "chunkId": "4feddb",
+        "hash": "0d4bf021",
+        "encoded": "indicators%20=%20IndicatorsResponse(**data)",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "4feddb",
+        "hash": "ac5d513f",
+        "encoded": "assert%20len(indicators.indicators)%20%3C=%20tail",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "4feddb",
+        "hash": "a1136e8e",
+        "encoded": "def%20test_indicators_completeness(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "469": {
+        "chunkId": "4feddb",
+        "hash": "2dc513a8",
+        "encoded": "%22%22%22Indicators%20should%20include%20all%20expected%20technical%20indicators%22%22%22",
+        "prevChunkIds": []
+      },
+      "470": {
+        "chunkId": "4feddb",
+        "hash": "8bd9749b",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/indicators/%7Btest_ticker%7D%22,%20params=%7B%22tail%22:%205%7D)",
+        "prevChunkIds": []
+      },
+      "471": {
+        "chunkId": "4feddb",
+        "hash": "91689f9a",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "472": {
+        "chunkId": "4feddb",
+        "hash": "be5ab318",
+        "encoded": "indicators%20=%20IndicatorsResponse(**data)",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "4feddb",
+        "hash": "7bcbba08",
+        "encoded": "#%20Check%20that%20at%20least%20one%20indicator%20has%20all%20fields",
+        "prevChunkIds": []
+      },
+      "475": {
+        "chunkId": "4feddb",
+        "hash": "9a260442",
+        "encoded": "if%20len(indicators.indicators)%20%3E%200:",
+        "prevChunkIds": []
+      },
+      "476": {
+        "chunkId": "4feddb",
+        "hash": "f6927707",
+        "encoded": "latest%20=%20indicators.indicators%5B-1%5D",
+        "prevChunkIds": []
+      },
+      "477": {
+        "chunkId": "4feddb",
+        "hash": "13c32d91",
+        "encoded": "#%20At%20least%20some%20indicators%20should%20be%20present%20(may%20be%20None%20for%20early%20dates)",
+        "prevChunkIds": []
+      },
+      "478": {
+        "chunkId": "4feddb",
+        "hash": "0dcffe3e",
+        "encoded": "indicator_fields%20=%20%5B'rsi',%20'macd',%20'bb_upper',%20'adx',%20'atr',%20'sma_50'%5D",
+        "prevChunkIds": []
+      },
+      "479": {
+        "chunkId": "4feddb",
+        "hash": "67f543e7",
+        "encoded": "assert%20latest.date%20is%20not%20None",
+        "prevChunkIds": []
+      },
+      "481": {
+        "chunkId": "4feddb",
+        "hash": "2752173a",
+        "encoded": "@pytest.mark.edge_case",
+        "prevChunkIds": []
+      },
+      "482": {
+        "chunkId": "4feddb",
+        "hash": "c22cceb1",
+        "encoded": "def%20test_indicators_invalid_tail(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "483": {
+        "chunkId": "4feddb",
+        "hash": "070003ea",
+        "encoded": "%22%22%22Indicators%20endpoint%20should%20handle%20invalid%20tail%20values%22%22%22",
+        "prevChunkIds": []
+      },
+      "484": {
+        "chunkId": "4feddb",
+        "hash": "378557d5",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/indicators/%7Btest_ticker%7D%22,%20params=%7B%22tail%22:%20-1%7D)",
+        "prevChunkIds": []
+      },
+      "485": {
+        "chunkId": "4feddb",
+        "hash": "a78b850d",
+        "encoded": "#%20Should%20either%20reject%20or%20default%20to%20valid%20value",
+        "prevChunkIds": []
+      },
+      "486": {
+        "chunkId": "4feddb",
+        "hash": "0cda780e",
+        "encoded": "assert%20response.status_code%20in%20%5B200,%20422%5D",
+        "prevChunkIds": []
+      },
+      "488": {
+        "chunkId": "4feddb",
+        "hash": "d00af181",
+        "encoded": "@pytest.mark.performance",
+        "prevChunkIds": []
+      },
+      "489": {
+        "chunkId": "4feddb",
+        "hash": "3cc90a10",
+        "encoded": "def%20test_indicators_response_time(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "490": {
+        "chunkId": "4feddb",
+        "hash": "aff8c1e1",
+        "encoded": "%22%22%22Indicators%20endpoint%20should%20respond%20within%2010%20seconds%20(computation%20intensive)%22%22%22",
+        "prevChunkIds": []
+      },
+      "491": {
+        "chunkId": "4feddb",
+        "hash": "e7934efd",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/indicators/%7Btest_ticker%7D%22,%20params=%7B%22tail%22:%2015%7D)",
+        "prevChunkIds": []
+      },
+      "492": {
+        "chunkId": "4feddb",
+        "hash": "5c2089f1",
+        "encoded": "assert%20response.elapsed.total_seconds()%20%3C%2010.0",
+        "prevChunkIds": []
+      },
+      "493": {
+        "chunkId": "4feddb",
+        "hash": "1fdbe263",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "495": {
+        "chunkId": "4feddb",
+        "hash": "b9dedd10",
+        "encoded": "###%207.%20News%20Endpoint%20Tests%20(tests/test_news.py)",
+        "prevChunkIds": []
+      },
+      "497": {
+        "chunkId": "4feddb",
+        "hash": "14a8f359",
+        "encoded": "%60%60%60python",
+        "prevChunkIds": []
+      },
+      "498": {
+        "chunkId": "4feddb",
+        "hash": "7144d7b0",
+        "encoded": "import%20pytest",
+        "prevChunkIds": []
+      },
+      "499": {
+        "chunkId": "4feddb",
+        "hash": "2b901680",
+        "encoded": "from%20tests.schemas.response_schemas%20import%20NewsResponse",
+        "prevChunkIds": []
+      },
+      "501": {
+        "chunkId": "4feddb",
+        "hash": "698adda3",
+        "encoded": "@pytest.mark.integration",
+        "prevChunkIds": []
+      },
+      "502": {
+        "chunkId": "4feddb",
+        "hash": "34aa981d",
+        "encoded": "class%20TestNewsEndpoint:",
+        "prevChunkIds": []
+      },
+      "503": {
+        "chunkId": "4feddb",
+        "hash": "dcee6eac",
+        "encoded": "%22%22%22Test%20suite%20for%20news%20endpoint%22%22%22",
+        "prevChunkIds": []
+      },
+      "505": {
+        "chunkId": "4feddb",
+        "hash": "d823c1af",
+        "encoded": "def%20test_news_default_limit(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "506": {
+        "chunkId": "4feddb",
+        "hash": "ea80e0fb",
+        "encoded": "%22%22%22News%20endpoint%20should%20return%20data%20with%20default%20limit%22%22%22",
+        "prevChunkIds": []
+      },
+      "507": {
+        "chunkId": "4feddb",
+        "hash": "1f3f2fef",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/news/%7Btest_ticker%7D%22)",
+        "prevChunkIds": []
+      },
+      "508": {
+        "chunkId": "4feddb",
+        "hash": "e5598611",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "510": {
+        "chunkId": "4feddb",
+        "hash": "309359fa",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "511": {
+        "chunkId": "4feddb",
+        "hash": "3f6bd244",
+        "encoded": "news%20=%20NewsResponse(**data)",
+        "prevChunkIds": []
+      },
+      "513": {
+        "chunkId": "4feddb",
+        "hash": "8f35e928",
+        "encoded": "assert%20news.symbol%20==%20test_ticker",
+        "prevChunkIds": []
+      },
+      "514": {
+        "chunkId": "4feddb",
+        "hash": "3e2622e0",
+        "encoded": "#%20News%20may%20be%20empty%20for%20some%20tickers,%20so%20just%20check%20structure",
+        "prevChunkIds": []
+      },
+      "515": {
+        "chunkId": "4feddb",
+        "hash": "2f644b01",
+        "encoded": "assert%20isinstance(news.news,%20list)",
+        "prevChunkIds": []
+      },
+      "517": {
+        "chunkId": "4feddb",
+        "hash": "fc9e5cd3",
+        "encoded": "@pytest.mark.parametrize(%22limit%22,%20%5B1,%205,%2010,%2030,%2050%5D)",
+        "prevChunkIds": []
+      },
+      "518": {
+        "chunkId": "4feddb",
+        "hash": "2edc72cf",
+        "encoded": "def%20test_news_various_limits(self,%20http_client,%20base_url,%20test_ticker,%20limit):",
+        "prevChunkIds": []
+      },
+      "519": {
+        "chunkId": "4feddb",
+        "hash": "a81e7926",
+        "encoded": "%22%22%22News%20endpoint%20should%20respect%20limit%20parameter%22%22%22",
+        "prevChunkIds": []
+      },
+      "520": {
+        "chunkId": "4feddb",
+        "hash": "cefd1d0f",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/news/%7Btest_ticker%7D%22,%20params=%7B%22limit%22:%20limit%7D)",
+        "prevChunkIds": []
+      },
+      "521": {
+        "chunkId": "4feddb",
+        "hash": "7032ef3f",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "523": {
+        "chunkId": "4feddb",
+        "hash": "259a8153",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "524": {
+        "chunkId": "4feddb",
+        "hash": "447c807e",
+        "encoded": "news%20=%20NewsResponse(**data)",
+        "prevChunkIds": []
+      },
+      "525": {
+        "chunkId": "4feddb",
+        "hash": "ba22156d",
+        "encoded": "assert%20len(news.news)%20%3C=%20limit",
+        "prevChunkIds": []
+      },
+      "527": {
+        "chunkId": "4feddb",
+        "hash": "8cfb422b",
+        "encoded": "def%20test_news_item_structure(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "528": {
+        "chunkId": "4feddb",
+        "hash": "d1e7a445",
+        "encoded": "%22%22%22News%20items%20should%20have%20required%20fields%22%22%22",
+        "prevChunkIds": []
+      },
+      "529": {
+        "chunkId": "4feddb",
+        "hash": "26d528f8",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/news/%7Btest_ticker%7D%22,%20params=%7B%22limit%22:%205%7D)",
+        "prevChunkIds": []
+      },
+      "530": {
+        "chunkId": "4feddb",
+        "hash": "cdc199cf",
+        "encoded": "data%20=%20response.json()",
+        "prevChunkIds": []
+      },
+      "531": {
+        "chunkId": "4feddb",
+        "hash": "cc9ade75",
+        "encoded": "news%20=%20NewsResponse(**data)",
+        "prevChunkIds": []
+      },
+      "533": {
+        "chunkId": "4feddb",
+        "hash": "e515205c",
+        "encoded": "if%20len(news.news)%20%3E%200:",
+        "prevChunkIds": []
+      },
+      "534": {
+        "chunkId": "4feddb",
+        "hash": "6655073e",
+        "encoded": "item%20=%20news.news%5B0%5D",
+        "prevChunkIds": []
+      },
+      "535": {
+        "chunkId": "4feddb",
+        "hash": "22a61aa3",
+        "encoded": "assert%20item.title%20is%20not%20None",
+        "prevChunkIds": []
+      },
+      "536": {
+        "chunkId": "4feddb",
+        "hash": "2f952e8e",
+        "encoded": "assert%20len(item.title)%20%3E%200",
+        "prevChunkIds": []
+      },
+      "538": {
+        "chunkId": "4feddb",
+        "hash": "8a18b378",
+        "encoded": "@pytest.mark.edge_case",
+        "prevChunkIds": []
+      },
+      "539": {
+        "chunkId": "4feddb",
+        "hash": "580abea4",
+        "encoded": "def%20test_news_zero_limit(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "540": {
+        "chunkId": "4feddb",
+        "hash": "43cbaf95",
+        "encoded": "%22%22%22News%20endpoint%20should%20handle%20zero%20limit%22%22%22",
+        "prevChunkIds": []
+      },
+      "541": {
+        "chunkId": "4feddb",
+        "hash": "f9d0867e",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/news/%7Btest_ticker%7D%22,%20params=%7B%22limit%22:%200%7D)",
+        "prevChunkIds": []
+      },
+      "542": {
+        "chunkId": "4feddb",
+        "hash": "9bbb5103",
+        "encoded": "#%20Should%20either%20return%20empty%20or%20reject",
+        "prevChunkIds": []
+      },
+      "543": {
+        "chunkId": "4feddb",
+        "hash": "2672c5d9",
+        "encoded": "assert%20response.status_code%20in%20%5B200,%20422%5D",
+        "prevChunkIds": []
+      },
+      "544": {
+        "chunkId": "4feddb",
+        "hash": "285bc8aa",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "546": {
+        "chunkId": "4feddb",
+        "hash": "4c75998f",
+        "encoded": "###%208.%20Authentication%20Tests%20(tests/test_authentication.py)",
+        "prevChunkIds": []
+      },
+      "548": {
+        "chunkId": "4feddb",
+        "hash": "63729bba",
+        "encoded": "%60%60%60python",
+        "prevChunkIds": []
+      },
+      "549": {
+        "chunkId": "4feddb",
+        "hash": "c2f55b1b",
+        "encoded": "import%20pytest",
+        "prevChunkIds": []
+      },
+      "550": {
+        "chunkId": "4feddb",
+        "hash": "f57fabd4",
+        "encoded": "import%20os",
+        "prevChunkIds": []
+      },
+      "552": {
+        "chunkId": "4feddb",
+        "hash": "795cc2dd",
+        "encoded": "@pytest.mark.integration",
+        "prevChunkIds": []
+      },
+      "553": {
+        "chunkId": "4feddb",
+        "hash": "eacdb81d",
+        "encoded": "class%20TestAPIKeyAuthentication:",
+        "prevChunkIds": []
+      },
+      "554": {
+        "chunkId": "4feddb",
+        "hash": "9b5faa51",
+        "encoded": "%22%22%22Test%20suite%20for%20API%20key%20authentication%22%22%22",
+        "prevChunkIds": []
+      },
+      "556": {
+        "chunkId": "4feddb",
+        "hash": "c0dd3fd5",
+        "encoded": "@pytest.mark.skipif(not%20os.getenv(%22API_KEY%22),%20reason=%22API_KEY%20not%20set%22)",
+        "prevChunkIds": []
+      },
+      "557": {
+        "chunkId": "4feddb",
+        "hash": "a23d4f90",
+        "encoded": "def%20test_valid_api_key(self,%20http_client,%20base_url,%20test_ticker,%20api_key):",
+        "prevChunkIds": []
+      },
+      "558": {
+        "chunkId": "4feddb",
+        "hash": "e689b392",
+        "encoded": "%22%22%22Request%20with%20valid%20API%20key%20should%20succeed%22%22%22",
+        "prevChunkIds": []
+      },
+      "559": {
+        "chunkId": "4feddb",
+        "hash": "a837b8ca",
+        "encoded": "response%20=%20http_client.get(",
+        "prevChunkIds": []
+      },
+      "560": {
+        "chunkId": "4feddb",
+        "hash": "f012cb61",
+        "encoded": "f%22%7Bbase_url%7D/quote/%7Btest_ticker%7D%22,",
+        "prevChunkIds": []
+      },
+      "561": {
+        "chunkId": "4feddb",
+        "hash": "151da6fc",
+        "encoded": "params=%7B%22api_key%22:%20api_key%7D",
+        "prevChunkIds": []
+      },
+      "562": {
+        "chunkId": "4feddb",
+        "hash": "1ccbced7",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "563": {
+        "chunkId": "4feddb",
+        "hash": "a9c21bcf",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "565": {
+        "chunkId": "4feddb",
+        "hash": "2b0bc488",
+        "encoded": "@pytest.mark.skipif(not%20os.getenv(%22API_KEY%22),%20reason=%22API_KEY%20not%20set%22)",
+        "prevChunkIds": []
+      },
+      "566": {
+        "chunkId": "4feddb",
+        "hash": "8ee4e50f",
+        "encoded": "def%20test_invalid_api_key(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "567": {
+        "chunkId": "4feddb",
+        "hash": "b4f3b4ba",
+        "encoded": "%22%22%22Request%20with%20invalid%20API%20key%20should%20fail%20with%20401%22%22%22",
+        "prevChunkIds": []
+      },
+      "568": {
+        "chunkId": "4feddb",
+        "hash": "33089741",
+        "encoded": "response%20=%20http_client.get(",
+        "prevChunkIds": []
+      },
+      "569": {
+        "chunkId": "4feddb",
+        "hash": "0771b392",
+        "encoded": "f%22%7Bbase_url%7D/quote/%7Btest_ticker%7D%22,",
+        "prevChunkIds": []
+      },
+      "570": {
+        "chunkId": "4feddb",
+        "hash": "d9af7d37",
+        "encoded": "params=%7B%22api_key%22:%20%22invalid-key-12345%22%7D",
+        "prevChunkIds": []
+      },
+      "571": {
+        "chunkId": "4feddb",
+        "hash": "598ce8b9",
+        "encoded": ")",
+        "prevChunkIds": []
+      },
+      "572": {
+        "chunkId": "4feddb",
+        "hash": "803be95b",
+        "encoded": "assert%20response.status_code%20==%20401",
+        "prevChunkIds": []
+      },
+      "574": {
+        "chunkId": "4feddb",
+        "hash": "f22ffd10",
+        "encoded": "@pytest.mark.skipif(not%20os.getenv(%22API_KEY%22),%20reason=%22API_KEY%20not%20set%22)",
+        "prevChunkIds": []
+      },
+      "575": {
+        "chunkId": "4feddb",
+        "hash": "93c99175",
+        "encoded": "def%20test_missing_api_key(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "576": {
+        "chunkId": "4feddb",
+        "hash": "543b6a7c",
+        "encoded": "%22%22%22Request%20without%20API%20key%20should%20fail%20with%20401%20when%20protection%20enabled%22%22%22",
+        "prevChunkIds": []
+      },
+      "577": {
+        "chunkId": "4feddb",
+        "hash": "e74fed55",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/quote/%7Btest_ticker%7D%22)",
+        "prevChunkIds": []
+      },
+      "578": {
+        "chunkId": "4feddb",
+        "hash": "37cff107",
+        "encoded": "assert%20response.status_code%20==%20401",
+        "prevChunkIds": []
+      },
+      "580": {
+        "chunkId": "4feddb",
+        "hash": "b227b9e9",
+        "encoded": "@pytest.mark.skipif(os.getenv(%22API_KEY%22),%20reason=%22API_KEY%20is%20set%22)",
+        "prevChunkIds": []
+      },
+      "581": {
+        "chunkId": "4feddb",
+        "hash": "bd3fe227",
+        "encoded": "def%20test_no_auth_required(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "582": {
+        "chunkId": "4feddb",
+        "hash": "f0360861",
+        "encoded": "%22%22%22When%20API_KEY%20not%20set,%20requests%20should%20work%20without%20authentication%22%22%22",
+        "prevChunkIds": []
+      },
+      "583": {
+        "chunkId": "4feddb",
+        "hash": "85690e70",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/quote/%7Btest_ticker%7D%22)",
+        "prevChunkIds": []
+      },
+      "584": {
+        "chunkId": "4feddb",
+        "hash": "7f2da4ff",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "585": {
+        "chunkId": "4feddb",
+        "hash": "21bfd671",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "587": {
+        "chunkId": "4feddb",
+        "hash": "3331d0d9",
+        "encoded": "###%209.%20Edge%20Cases%20Tests%20(tests/test_edge_cases.py)",
+        "prevChunkIds": []
+      },
+      "589": {
+        "chunkId": "4feddb",
+        "hash": "8cf3f66c",
+        "encoded": "%60%60%60python",
+        "prevChunkIds": []
+      },
+      "590": {
+        "chunkId": "4feddb",
+        "hash": "2874f60f",
+        "encoded": "import%20pytest",
+        "prevChunkIds": []
+      },
+      "592": {
+        "chunkId": "4feddb",
+        "hash": "c8f60696",
+        "encoded": "@pytest.mark.edge_case",
+        "prevChunkIds": []
+      },
+      "593": {
+        "chunkId": "4feddb",
+        "hash": "31451c50",
+        "encoded": "class%20TestEdgeCases:",
+        "prevChunkIds": []
+      },
+      "594": {
+        "chunkId": "4feddb",
+        "hash": "ab8d99e6",
+        "encoded": "%22%22%22Test%20suite%20for%20edge%20cases%20and%20error%20handling%22%22%22",
+        "prevChunkIds": []
+      },
+      "596": {
+        "chunkId": "4feddb",
+        "hash": "0e6e0718",
+        "encoded": "def%20test_cors_headers(self,%20http_client,%20base_url):",
+        "prevChunkIds": []
+      },
+      "597": {
+        "chunkId": "4feddb",
+        "hash": "8a2bee21",
+        "encoded": "%22%22%22API%20should%20include%20CORS%20headers%22%22%22",
+        "prevChunkIds": []
+      },
+      "598": {
+        "chunkId": "4feddb",
+        "hash": "c920a601",
+        "encoded": "response%20=%20http_client.options(f%22%7Bbase_url%7D/health%22)",
+        "prevChunkIds": []
+      },
+      "599": {
+        "chunkId": "4feddb",
+        "hash": "d0478fd2",
+        "encoded": "#%20Check%20for%20CORS%20headers",
+        "prevChunkIds": []
+      },
+      "600": {
+        "chunkId": "4feddb",
+        "hash": "691010ee",
+        "encoded": "assert%20%22access-control-allow-origin%22%20in%20response.headers%20or%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "602": {
+        "chunkId": "4feddb",
+        "hash": "79e9734f",
+        "encoded": "def%20test_method_not_allowed(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "603": {
+        "chunkId": "4feddb",
+        "hash": "e917385d",
+        "encoded": "%22%22%22POST%20to%20GET-only%20endpoint%20should%20return%20405%22%22%22",
+        "prevChunkIds": []
+      },
+      "604": {
+        "chunkId": "4feddb",
+        "hash": "84e4b3e9",
+        "encoded": "response%20=%20http_client.post(f%22%7Bbase_url%7D/quote/%7Btest_ticker%7D%22)",
+        "prevChunkIds": []
+      },
+      "605": {
+        "chunkId": "4feddb",
+        "hash": "2d2d3448",
+        "encoded": "assert%20response.status_code%20==%20405",
+        "prevChunkIds": []
+      },
+      "607": {
+        "chunkId": "4feddb",
+        "hash": "549fdc21",
+        "encoded": "def%20test_invalid_endpoint(self,%20http_client,%20base_url):",
+        "prevChunkIds": []
+      },
+      "608": {
+        "chunkId": "4feddb",
+        "hash": "fe9b8fb7",
+        "encoded": "%22%22%22Request%20to%20non-existent%20endpoint%20should%20return%20404%22%22%22",
+        "prevChunkIds": []
+      },
+      "609": {
+        "chunkId": "4feddb",
+        "hash": "3120b8b8",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/nonexistent%22)",
+        "prevChunkIds": []
+      },
+      "610": {
+        "chunkId": "4feddb",
+        "hash": "9a2abaa3",
+        "encoded": "assert%20response.status_code%20==%20404",
+        "prevChunkIds": []
+      },
+      "612": {
+        "chunkId": "4feddb",
+        "hash": "febc98f6",
+        "encoded": "def%20test_special_characters_in_ticker(self,%20http_client,%20base_url):",
+        "prevChunkIds": []
+      },
+      "613": {
+        "chunkId": "4feddb",
+        "hash": "d786b52e",
+        "encoded": "%22%22%22Ticker%20with%20special%20characters%20should%20be%20handled%22%22%22",
+        "prevChunkIds": []
+      },
+      "614": {
+        "chunkId": "4feddb",
+        "hash": "98b9bfd3",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/quote/BRK.B%22)",
+        "prevChunkIds": []
+      },
+      "615": {
+        "chunkId": "4feddb",
+        "hash": "a3c75f29",
+        "encoded": "#%20Should%20either%20work%20or%20return%20proper%20error",
+        "prevChunkIds": []
+      },
+      "616": {
+        "chunkId": "4feddb",
+        "hash": "b9754526",
+        "encoded": "assert%20response.status_code%20in%20%5B200,%20404%5D",
+        "prevChunkIds": []
+      },
+      "618": {
+        "chunkId": "4feddb",
+        "hash": "025af5b7",
+        "encoded": "@pytest.mark.parametrize(%22endpoint%22,%20%5B%22/health%22,%20%22/%22,%20%22/quote/AAPL%22%5D)",
+        "prevChunkIds": []
+      },
+      "619": {
+        "chunkId": "4feddb",
+        "hash": "ed1a9345",
+        "encoded": "def%20test_concurrent_requests(self,%20http_client,%20base_url,%20endpoint):",
+        "prevChunkIds": []
+      },
+      "620": {
+        "chunkId": "4feddb",
+        "hash": "a769ae47",
+        "encoded": "%22%22%22API%20should%20handle%20concurrent%20requests%22%22%22",
+        "prevChunkIds": []
+      },
+      "621": {
+        "chunkId": "4feddb",
+        "hash": "6fbf1636",
+        "encoded": "import%20concurrent.futures",
+        "prevChunkIds": []
+      },
+      "623": {
+        "chunkId": "4feddb",
+        "hash": "c6491357",
+        "encoded": "def%20make_request():",
+        "prevChunkIds": []
+      },
+      "624": {
+        "chunkId": "4feddb",
+        "hash": "8c99645e",
+        "encoded": "return%20http_client.get(f%22%7Bbase_url%7D%7Bendpoint%7D%22)",
+        "prevChunkIds": []
+      },
+      "626": {
+        "chunkId": "4feddb",
+        "hash": "1538eb48",
+        "encoded": "with%20concurrent.futures.ThreadPoolExecutor(max_workers=5)%20as%20executor:",
+        "prevChunkIds": []
+      },
+      "627": {
+        "chunkId": "4feddb",
+        "hash": "79f7461d",
+        "encoded": "futures%20=%20%5Bexecutor.submit(make_request)%20for%20_%20in%20range(10)%5D",
+        "prevChunkIds": []
+      },
+      "628": {
+        "chunkId": "4feddb",
+        "hash": "b208269f",
+        "encoded": "results%20=%20%5Bf.result()%20for%20f%20in%20concurrent.futures.as_completed(futures)%5D",
+        "prevChunkIds": []
+      },
+      "630": {
+        "chunkId": "4feddb",
+        "hash": "fd8b41c5",
+        "encoded": "#%20All%20requests%20should%20succeed",
+        "prevChunkIds": []
+      },
+      "631": {
+        "chunkId": "4feddb",
+        "hash": "b86e7a2f",
+        "encoded": "assert%20all(r.status_code%20==%20200%20for%20r%20in%20results)",
+        "prevChunkIds": []
+      },
+      "632": {
+        "chunkId": "4feddb",
+        "hash": "b4abcfaa",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "634": {
+        "chunkId": "4feddb",
+        "hash": "7695c857",
+        "encoded": "###%2010.%20Performance%20Tests%20(tests/test_performance.py)",
+        "prevChunkIds": []
+      },
+      "636": {
+        "chunkId": "4feddb",
+        "hash": "deb249c2",
+        "encoded": "%60%60%60python",
+        "prevChunkIds": []
+      },
+      "637": {
+        "chunkId": "4feddb",
+        "hash": "dbd7db52",
+        "encoded": "import%20pytest",
+        "prevChunkIds": []
+      },
+      "638": {
+        "chunkId": "4feddb",
+        "hash": "6b9e520e",
+        "encoded": "import%20time",
+        "prevChunkIds": []
+      },
+      "640": {
+        "chunkId": "4feddb",
+        "hash": "30872833",
+        "encoded": "@pytest.mark.performance",
+        "prevChunkIds": []
+      },
+      "641": {
+        "chunkId": "4feddb",
+        "hash": "565fb991",
+        "encoded": "class%20TestPerformance:",
+        "prevChunkIds": []
+      },
+      "642": {
+        "chunkId": "4feddb",
+        "hash": "a1bdf396",
+        "encoded": "%22%22%22Test%20suite%20for%20performance%20benchmarks%22%22%22",
+        "prevChunkIds": []
+      },
+      "644": {
+        "chunkId": "4feddb",
+        "hash": "36d1d075",
+        "encoded": "def%20test_health_endpoint_latency(self,%20http_client,%20base_url):",
+        "prevChunkIds": []
+      },
+      "645": {
+        "chunkId": "4feddb",
+        "hash": "4adbf830",
+        "encoded": "%22%22%22Health%20endpoint%20should%20respond%20in%20%3C%20100ms%22%22%22",
+        "prevChunkIds": []
+      },
+      "646": {
+        "chunkId": "4feddb",
+        "hash": "a68f1326",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/health%22)",
+        "prevChunkIds": []
+      },
+      "647": {
+        "chunkId": "4feddb",
+        "hash": "cb90ecb5",
+        "encoded": "assert%20response.elapsed.total_seconds()%20%3C%200.1",
+        "prevChunkIds": []
+      },
+      "649": {
+        "chunkId": "4feddb",
+        "hash": "f12e5bbf",
+        "encoded": "def%20test_quote_endpoint_latency(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "650": {
+        "chunkId": "4feddb",
+        "hash": "443e4e67",
+        "encoded": "%22%22%22Quote%20endpoint%20should%20respond%20in%20%3C%205s%22%22%22",
+        "prevChunkIds": []
+      },
+      "651": {
+        "chunkId": "4feddb",
+        "hash": "8de1b3cc",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/quote/%7Btest_ticker%7D%22)",
+        "prevChunkIds": []
+      },
+      "652": {
+        "chunkId": "4feddb",
+        "hash": "a7b29aa0",
+        "encoded": "assert%20response.elapsed.total_seconds()%20%3C%205.0",
+        "prevChunkIds": []
+      },
+      "654": {
+        "chunkId": "4feddb",
+        "hash": "9b1db597",
+        "encoded": "def%20test_throughput(self,%20http_client,%20base_url):",
+        "prevChunkIds": []
+      },
+      "655": {
+        "chunkId": "4feddb",
+        "hash": "f2dc4cef",
+        "encoded": "%22%22%22API%20should%20handle%2010%20requests%20in%20%3C%2010%20seconds%22%22%22",
+        "prevChunkIds": []
+      },
+      "656": {
+        "chunkId": "4feddb",
+        "hash": "a4ad81cd",
+        "encoded": "start%20=%20time.time()",
+        "prevChunkIds": []
+      },
+      "657": {
+        "chunkId": "4feddb",
+        "hash": "2f04e9ff",
+        "encoded": "for%20_%20in%20range(10):",
+        "prevChunkIds": []
+      },
+      "658": {
+        "chunkId": "4feddb",
+        "hash": "ce19202e",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/health%22)",
+        "prevChunkIds": []
+      },
+      "659": {
+        "chunkId": "4feddb",
+        "hash": "34a56490",
+        "encoded": "assert%20response.status_code%20==%20200",
+        "prevChunkIds": []
+      },
+      "660": {
+        "chunkId": "4feddb",
+        "hash": "ea3d9a5e",
+        "encoded": "duration%20=%20time.time()%20-%20start",
+        "prevChunkIds": []
+      },
+      "661": {
+        "chunkId": "4feddb",
+        "hash": "f4b285fa",
+        "encoded": "assert%20duration%20%3C%2010.0",
+        "prevChunkIds": []
+      },
+      "663": {
+        "chunkId": "4feddb",
+        "hash": "da968243",
+        "encoded": "def%20test_response_size(self,%20http_client,%20base_url,%20test_ticker):",
+        "prevChunkIds": []
+      },
+      "664": {
+        "chunkId": "4feddb",
+        "hash": "4b82f263",
+        "encoded": "%22%22%22Response%20sizes%20should%20be%20reasonable%22%22%22",
+        "prevChunkIds": []
+      },
+      "665": {
+        "chunkId": "4feddb",
+        "hash": "9f3a6f2d",
+        "encoded": "response%20=%20http_client.get(f%22%7Bbase_url%7D/quote/%7Btest_ticker%7D%22)",
+        "prevChunkIds": []
+      },
+      "666": {
+        "chunkId": "4feddb",
+        "hash": "b6490800",
+        "encoded": "content_length%20=%20len(response.content)",
+        "prevChunkIds": []
+      },
+      "667": {
+        "chunkId": "4feddb",
+        "hash": "f2a2234c",
+        "encoded": "#%20Quote%20response%20should%20be%20%3C%2010KB",
+        "prevChunkIds": []
+      },
+      "668": {
+        "chunkId": "4feddb",
+        "hash": "5cb489a4",
+        "encoded": "assert%20content_length%20%3C%2010240",
+        "prevChunkIds": []
+      },
+      "669": {
+        "chunkId": "4feddb",
+        "hash": "b3e3309e",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "671": {
+        "chunkId": "4feddb",
+        "hash": "75312917",
+        "encoded": "##%20Running%20Tests",
+        "prevChunkIds": []
+      },
+      "673": {
+        "chunkId": "4feddb",
+        "hash": "3ad14c94",
+        "encoded": "###%20Run%20all%20tests",
+        "prevChunkIds": []
+      },
+      "674": {
+        "chunkId": "4feddb",
+        "hash": "03990995",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "675": {
+        "chunkId": "4feddb",
+        "hash": "9702df02",
+        "encoded": "pytest%20tests/%20-v",
+        "prevChunkIds": []
+      },
+      "676": {
+        "chunkId": "4feddb",
+        "hash": "47f74832",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "678": {
+        "chunkId": "4feddb",
+        "hash": "84b22b07",
+        "encoded": "###%20Run%20with%20coverage",
+        "prevChunkIds": []
+      },
+      "679": {
+        "chunkId": "4feddb",
+        "hash": "7e595988",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "680": {
+        "chunkId": "4feddb",
+        "hash": "fa141105",
+        "encoded": "pytest%20tests/%20--cov=app%20--cov-report=html%20--cov-report=term",
+        "prevChunkIds": []
+      },
+      "681": {
+        "chunkId": "4feddb",
+        "hash": "b408ad66",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "683": {
+        "chunkId": "4feddb",
+        "hash": "10311538",
+        "encoded": "###%20Run%20specific%20test%20categories",
+        "prevChunkIds": []
+      },
+      "684": {
+        "chunkId": "4feddb",
+        "hash": "e183bca7",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "685": {
+        "chunkId": "4feddb",
+        "hash": "4cfbe4ba",
+        "encoded": "#%20Smoke%20tests%20only",
+        "prevChunkIds": []
+      },
+      "686": {
+        "chunkId": "4feddb",
+        "hash": "4263c447",
+        "encoded": "pytest%20tests/%20-m%20smoke%20-v",
+        "prevChunkIds": []
+      },
+      "688": {
+        "chunkId": "4feddb",
+        "hash": "d0a30634",
+        "encoded": "#%20Integration%20tests",
+        "prevChunkIds": []
+      },
+      "689": {
+        "chunkId": "4feddb",
+        "hash": "a1b7bce5",
+        "encoded": "pytest%20tests/%20-m%20integration%20-v",
+        "prevChunkIds": []
+      },
+      "691": {
+        "chunkId": "4feddb",
+        "hash": "2f62afea",
+        "encoded": "#%20Performance%20tests",
+        "prevChunkIds": []
+      },
+      "692": {
+        "chunkId": "4feddb",
+        "hash": "f47f06b4",
+        "encoded": "pytest%20tests/%20-m%20performance%20-v",
+        "prevChunkIds": []
+      },
+      "694": {
+        "chunkId": "4feddb",
+        "hash": "f0c042d8",
+        "encoded": "#%20Edge%20case%20tests",
+        "prevChunkIds": []
+      },
+      "695": {
+        "chunkId": "4feddb",
+        "hash": "a337556e",
+        "encoded": "pytest%20tests/%20-m%20edge_case%20-v",
+        "prevChunkIds": []
+      },
+      "696": {
+        "chunkId": "4feddb",
+        "hash": "b9f48c0f",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "698": {
+        "chunkId": "4feddb",
+        "hash": "0f3c4aa7",
+        "encoded": "###%20Run%20specific%20test%20file",
+        "prevChunkIds": []
+      },
+      "699": {
+        "chunkId": "4feddb",
+        "hash": "861dd76a",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "700": {
+        "chunkId": "4feddb",
+        "hash": "ea3fc5e1",
+        "encoded": "pytest%20tests/test_quote.py%20-v",
+        "prevChunkIds": []
+      },
+      "701": {
+        "chunkId": "4feddb",
+        "hash": "b165d0c3",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "703": {
+        "chunkId": "4feddb",
+        "hash": "087f3a4d",
+        "encoded": "###%20Run%20with%20HTML%20report",
+        "prevChunkIds": []
+      },
+      "704": {
+        "chunkId": "4feddb",
+        "hash": "06af04fe",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "705": {
+        "chunkId": "4feddb",
+        "hash": "1006ac8a",
+        "encoded": "pytest%20tests/%20--html=report.html%20--self-contained-html",
+        "prevChunkIds": []
+      },
+      "706": {
+        "chunkId": "4feddb",
+        "hash": "daab8826",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "708": {
+        "chunkId": "4feddb",
+        "hash": "f4f1c9a6",
+        "encoded": "###%20Run%20against%20remote%20server",
+        "prevChunkIds": []
+      },
+      "709": {
+        "chunkId": "4feddb",
+        "hash": "1b366fe9",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "710": {
+        "chunkId": "4feddb",
+        "hash": "4fc89830",
+        "encoded": "TEST_BASE_URL=https://yfinance-api.onrender.com%20pytest%20tests/%20-v",
+        "prevChunkIds": []
+      },
+      "711": {
+        "chunkId": "4feddb",
+        "hash": "ea9febe5",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "713": {
+        "chunkId": "4feddb",
+        "hash": "ea3fadf2",
+        "encoded": "###%20Run%20with%20parallel%20execution",
+        "prevChunkIds": []
+      },
+      "714": {
+        "chunkId": "4feddb",
+        "hash": "12d1a287",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "715": {
+        "chunkId": "4feddb",
+        "hash": "7cacccde",
+        "encoded": "pip%20install%20pytest-xdist",
+        "prevChunkIds": []
+      },
+      "716": {
+        "chunkId": "4feddb",
+        "hash": "ec69cde8",
+        "encoded": "pytest%20tests/%20-n%20auto",
+        "prevChunkIds": []
+      },
+      "717": {
+        "chunkId": "4feddb",
+        "hash": "b1fecda1",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "719": {
+        "chunkId": "4feddb",
+        "hash": "94d2267b",
+        "encoded": "##%20CI/CD%20Integration",
+        "prevChunkIds": []
+      },
+      "721": {
+        "chunkId": "4feddb",
+        "hash": "270f6e4b",
+        "encoded": "###%20GitHub%20Actions%20(.github/workflows/api-tests.yml)",
+        "prevChunkIds": []
+      },
+      "723": {
+        "chunkId": "4feddb",
+        "hash": "7abdc364",
+        "encoded": "%60%60%60yaml",
+        "prevChunkIds": []
+      },
+      "724": {
+        "chunkId": "4feddb",
+        "hash": "abee9c7d",
+        "encoded": "name:%20API%20Tests",
+        "prevChunkIds": []
+      },
+      "726": {
+        "chunkId": "4feddb",
+        "hash": "f878a8c0",
+        "encoded": "on:",
+        "prevChunkIds": []
+      },
+      "727": {
+        "chunkId": "4feddb",
+        "hash": "3a17c620",
+        "encoded": "push:",
+        "prevChunkIds": []
+      },
+      "728": {
+        "chunkId": "4feddb",
+        "hash": "87eaacc4",
+        "encoded": "branches:%20%5B%20main,%20develop%20%5D",
+        "prevChunkIds": []
+      },
+      "729": {
+        "chunkId": "4feddb",
+        "hash": "94bcb090",
+        "encoded": "pull_request:",
+        "prevChunkIds": []
+      },
+      "730": {
+        "chunkId": "4feddb",
+        "hash": "864149c8",
+        "encoded": "branches:%20%5B%20main%20%5D",
+        "prevChunkIds": []
+      },
+      "731": {
+        "chunkId": "4feddb",
+        "hash": "dbc953f9",
+        "encoded": "schedule:",
+        "prevChunkIds": []
+      },
+      "732": {
+        "chunkId": "4feddb",
+        "hash": "16254d35",
+        "encoded": "#%20Run%20daily%20at%202%20AM%20UTC",
+        "prevChunkIds": []
+      },
+      "733": {
+        "chunkId": "4feddb",
+        "hash": "4325d403",
+        "encoded": "-%20cron:%20'0%202%20*%20*%20*'",
+        "prevChunkIds": []
+      },
+      "735": {
+        "chunkId": "4feddb",
+        "hash": "8c170c95",
+        "encoded": "jobs:",
+        "prevChunkIds": []
+      },
+      "736": {
+        "chunkId": "4feddb",
+        "hash": "c4d2b024",
+        "encoded": "test:",
+        "prevChunkIds": []
+      },
+      "737": {
+        "chunkId": "4feddb",
+        "hash": "3500d318",
+        "encoded": "runs-on:%20ubuntu-latest",
+        "prevChunkIds": []
+      },
+      "739": {
+        "chunkId": "4feddb",
+        "hash": "ef4e8252",
+        "encoded": "strategy:",
+        "prevChunkIds": []
+      },
+      "740": {
+        "chunkId": "4feddb",
+        "hash": "6f26b17b",
+        "encoded": "matrix:",
+        "prevChunkIds": []
+      },
+      "741": {
+        "chunkId": "4feddb",
+        "hash": "3e9fb119",
+        "encoded": "python-version:%20%5B3.12%5D",
+        "prevChunkIds": []
+      },
+      "743": {
+        "chunkId": "4feddb",
+        "hash": "5a853ab2",
+        "encoded": "steps:",
+        "prevChunkIds": []
+      },
+      "744": {
+        "chunkId": "4feddb",
+        "hash": "b3b542c9",
+        "encoded": "-%20uses:%20actions/checkout@v4",
+        "prevChunkIds": []
+      },
+      "746": {
+        "chunkId": "4feddb",
+        "hash": "242a8297",
+        "encoded": "-%20name:%20Set%20up%20Python%20$%7B%7B%20matrix.python-version%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "747": {
+        "chunkId": "4feddb",
+        "hash": "2f38cbc2",
+        "encoded": "uses:%20actions/setup-python@v5",
+        "prevChunkIds": []
+      },
+      "748": {
+        "chunkId": "4feddb",
+        "hash": "5095eed7",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "749": {
+        "chunkId": "4feddb",
+        "hash": "a67d47d4",
+        "encoded": "python-version:%20$%7B%7B%20matrix.python-version%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "751": {
+        "chunkId": "4feddb",
+        "hash": "0913863d",
+        "encoded": "-%20name:%20Install%20dependencies",
+        "prevChunkIds": []
+      },
+      "752": {
+        "chunkId": "4feddb",
+        "hash": "8c7ec983",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "753": {
+        "chunkId": "4feddb",
+        "hash": "9cda0ea2",
+        "encoded": "python%20-m%20pip%20install%20--upgrade%20pip",
+        "prevChunkIds": []
+      },
+      "754": {
+        "chunkId": "4feddb",
+        "hash": "52a7e887",
+        "encoded": "pip%20install%20-r%20requirements.txt",
+        "prevChunkIds": []
+      },
+      "755": {
+        "chunkId": "4feddb",
+        "hash": "c6a374d2",
+        "encoded": "pip%20install%20-r%20requirements-test.txt",
+        "prevChunkIds": []
+      },
+      "757": {
+        "chunkId": "4feddb",
+        "hash": "f408a492",
+        "encoded": "-%20name:%20Start%20API%20server",
+        "prevChunkIds": []
+      },
+      "758": {
+        "chunkId": "4feddb",
+        "hash": "99cfd50e",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "759": {
+        "chunkId": "4feddb",
+        "hash": "cf17068c",
+        "encoded": "uvicorn%20app.main:app%20--host%200.0.0.0%20--port%208000%20&",
+        "prevChunkIds": []
+      },
+      "760": {
+        "chunkId": "4feddb",
+        "hash": "0f73c32a",
+        "encoded": "sleep%205",
+        "prevChunkIds": []
+      },
+      "761": {
+        "chunkId": "4feddb",
+        "hash": "c40b3c55",
+        "encoded": "env:",
+        "prevChunkIds": []
+      },
+      "762": {
+        "chunkId": "4feddb",
+        "hash": "55560b9b",
+        "encoded": "API_KEY:%20$%7B%7B%20secrets.API_KEY%20%7D%7D",
+        "prevChunkIds": []
+      },
+      "764": {
+        "chunkId": "4feddb",
+        "hash": "e6c03e35",
+        "encoded": "-%20name:%20Run%20smoke%20tests",
+        "prevChunkIds": []
+      },
+      "765": {
+        "chunkId": "4feddb",
+        "hash": "e0006e98",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "766": {
+        "chunkId": "4feddb",
+        "hash": "9652db61",
+        "encoded": "pytest%20tests/%20-m%20smoke%20-v",
+        "prevChunkIds": []
+      },
+      "768": {
+        "chunkId": "4feddb",
+        "hash": "838254c0",
+        "encoded": "-%20name:%20Run%20integration%20tests",
+        "prevChunkIds": []
+      },
+      "769": {
+        "chunkId": "4feddb",
+        "hash": "02f2b87c",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "770": {
+        "chunkId": "4feddb",
+        "hash": "63488796",
+        "encoded": "pytest%20tests/%20-m%20integration%20-v%20--cov=app%20--cov-report=xml",
+        "prevChunkIds": []
+      },
+      "772": {
+        "chunkId": "4feddb",
+        "hash": "bb693504",
+        "encoded": "-%20name:%20Run%20edge%20case%20tests",
+        "prevChunkIds": []
+      },
+      "773": {
+        "chunkId": "4feddb",
+        "hash": "cd8f3b5f",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "774": {
+        "chunkId": "4feddb",
+        "hash": "552fabad",
+        "encoded": "pytest%20tests/%20-m%20edge_case%20-v",
+        "prevChunkIds": []
+      },
+      "776": {
+        "chunkId": "4feddb",
+        "hash": "f174cd6f",
+        "encoded": "-%20name:%20Upload%20coverage%20to%20Codecov",
+        "prevChunkIds": []
+      },
+      "777": {
+        "chunkId": "4feddb",
+        "hash": "0c6be761",
+        "encoded": "uses:%20codecov/codecov-action@v4",
+        "prevChunkIds": []
+      },
+      "778": {
+        "chunkId": "4feddb",
+        "hash": "566d2432",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "779": {
+        "chunkId": "4feddb",
+        "hash": "650bb2e7",
+        "encoded": "file:%20./coverage.xml",
+        "prevChunkIds": []
+      },
+      "780": {
+        "chunkId": "4feddb",
+        "hash": "5ebf4115",
+        "encoded": "flags:%20unittests",
+        "prevChunkIds": []
+      },
+      "781": {
+        "chunkId": "4feddb",
+        "hash": "f7cd6185",
+        "encoded": "name:%20codecov-umbrella",
+        "prevChunkIds": []
+      },
+      "783": {
+        "chunkId": "4feddb",
+        "hash": "e4992419",
+        "encoded": "-%20name:%20Generate%20HTML%20report",
+        "prevChunkIds": []
+      },
+      "784": {
+        "chunkId": "4feddb",
+        "hash": "364b3463",
+        "encoded": "if:%20always()",
+        "prevChunkIds": []
+      },
+      "785": {
+        "chunkId": "4feddb",
+        "hash": "5d05331e",
+        "encoded": "run:%20%7C",
+        "prevChunkIds": []
+      },
+      "786": {
+        "chunkId": "4feddb",
+        "hash": "34e65d87",
+        "encoded": "pytest%20tests/%20--html=report.html%20--self-contained-html",
+        "prevChunkIds": []
+      },
+      "788": {
+        "chunkId": "4feddb",
+        "hash": "5fea5845",
+        "encoded": "-%20name:%20Upload%20test%20report",
+        "prevChunkIds": []
+      },
+      "789": {
+        "chunkId": "4feddb",
+        "hash": "8a465ba2",
+        "encoded": "if:%20always()",
+        "prevChunkIds": []
+      },
+      "790": {
+        "chunkId": "4feddb",
+        "hash": "68aca2e9",
+        "encoded": "uses:%20actions/upload-artifact@v4",
+        "prevChunkIds": []
+      },
+      "791": {
+        "chunkId": "4feddb",
+        "hash": "7fb7dc36",
+        "encoded": "with:",
+        "prevChunkIds": []
+      },
+      "792": {
+        "chunkId": "4feddb",
+        "hash": "844e7785",
+        "encoded": "name:%20test-report",
+        "prevChunkIds": []
+      },
+      "793": {
+        "chunkId": "4feddb",
+        "hash": "4e9999f9",
+        "encoded": "path:%20report.html",
+        "prevChunkIds": []
+      },
+      "794": {
+        "chunkId": "4feddb",
+        "hash": "ad9b7046",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "796": {
+        "chunkId": "4feddb",
+        "hash": "b455134e",
+        "encoded": "##%20pytest.ini%20Configuration",
+        "prevChunkIds": []
+      },
+      "798": {
+        "chunkId": "4feddb",
+        "hash": "5c593621",
+        "encoded": "%60%60%60ini",
+        "prevChunkIds": []
+      },
+      "799": {
+        "chunkId": "4feddb",
+        "hash": "0f253011",
+        "encoded": "%5Bpytest%5D",
+        "prevChunkIds": []
+      },
+      "800": {
+        "chunkId": "4feddb",
+        "hash": "503d3961",
+        "encoded": "testpaths%20=%20tests",
+        "prevChunkIds": []
+      },
+      "801": {
+        "chunkId": "4feddb",
+        "hash": "c455fa84",
+        "encoded": "python_files%20=%20test_*.py",
+        "prevChunkIds": []
+      },
+      "802": {
+        "chunkId": "4feddb",
+        "hash": "aaf68c62",
+        "encoded": "python_classes%20=%20Test*",
+        "prevChunkIds": []
+      },
+      "803": {
+        "chunkId": "4feddb",
+        "hash": "562bff9d",
+        "encoded": "python_functions%20=%20test_*",
+        "prevChunkIds": []
+      },
+      "804": {
+        "chunkId": "4feddb",
+        "hash": "a030481c",
+        "encoded": "addopts%20=",
+        "prevChunkIds": []
+      },
+      "805": {
+        "chunkId": "4feddb",
+        "hash": "844db9c5",
+        "encoded": "-v",
+        "prevChunkIds": []
+      },
+      "806": {
+        "chunkId": "4feddb",
+        "hash": "b85ed81f",
+        "encoded": "--strict-markers",
+        "prevChunkIds": []
+      },
+      "807": {
+        "chunkId": "4feddb",
+        "hash": "48d660f5",
+        "encoded": "--tb=short",
+        "prevChunkIds": []
+      },
+      "808": {
+        "chunkId": "4feddb",
+        "hash": "81f85bca",
+        "encoded": "--disable-warnings",
+        "prevChunkIds": []
+      },
+      "809": {
+        "chunkId": "4feddb",
+        "hash": "dc7cd4dd",
+        "encoded": "markers%20=",
+        "prevChunkIds": []
+      },
+      "810": {
+        "chunkId": "4feddb",
+        "hash": "de1437a8",
+        "encoded": "smoke:%20Quick%20smoke%20tests%20for%20basic%20functionality",
+        "prevChunkIds": []
+      },
+      "811": {
+        "chunkId": "4feddb",
+        "hash": "2a6363ca",
+        "encoded": "integration:%20Integration%20tests%20requiring%20live%20API",
+        "prevChunkIds": []
+      },
+      "812": {
+        "chunkId": "4feddb",
+        "hash": "011e8287",
+        "encoded": "performance:%20Performance%20and%20load%20tests",
+        "prevChunkIds": []
+      },
+      "813": {
+        "chunkId": "4feddb",
+        "hash": "60a8f47f",
+        "encoded": "edge_case:%20Edge%20case%20and%20error%20handling%20tests",
+        "prevChunkIds": []
+      },
+      "814": {
+        "chunkId": "4feddb",
+        "hash": "f7338275",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "816": {
+        "chunkId": "4feddb",
+        "hash": "09464f1d",
+        "encoded": "##%20Test%20Report%20Format",
+        "prevChunkIds": []
+      },
+      "818": {
+        "chunkId": "4feddb",
+        "hash": "80bf1f74",
+        "encoded": "After%20running%20tests,%20generate%20a%20summary%20report:",
+        "prevChunkIds": []
+      },
+      "820": {
+        "chunkId": "4feddb",
+        "hash": "924fe93c",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "821": {
+        "chunkId": "4feddb",
+        "hash": "4c0e474e",
+        "encoded": "pytest%20tests/%20-v%20--html=report.html%20--self-contained-html",
+        "prevChunkIds": []
+      },
+      "822": {
+        "chunkId": "4feddb",
+        "hash": "53027684",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "824": {
+        "chunkId": "4feddb",
+        "hash": "f10ec44d",
+        "encoded": "###%20Example%20Console%20Output",
+        "prevChunkIds": []
+      },
+      "826": {
+        "chunkId": "4feddb",
+        "hash": "5185b99c",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "827": {
+        "chunkId": "4feddb",
+        "hash": "b8eb3a85",
+        "encoded": "================================%20test%20session%20starts%20=================================",
+        "prevChunkIds": []
+      },
+      "828": {
+        "chunkId": "4feddb",
+        "hash": "92b4f3a1",
+        "encoded": "platform%20win32%20--%20Python%203.12.7,%20pytest-8.3.4",
+        "prevChunkIds": []
+      },
+      "829": {
+        "chunkId": "4feddb",
+        "hash": "6d00d4b7",
+        "encoded": "collected%2045%20items",
+        "prevChunkIds": []
+      },
+      "831": {
+        "chunkId": "4feddb",
+        "hash": "812ad512",
+        "encoded": "tests/test_health.py::TestHealthEndpoint::test_health_status_code%20PASSED%20%20%20%20%20%20%5B%202%25%5D",
+        "prevChunkIds": []
+      },
+      "832": {
+        "chunkId": "4feddb",
+        "hash": "42b7ddb2",
+        "encoded": "tests/test_health.py::TestHealthEndpoint::test_health_response_structure%20PASSED%20%5B%204%25%5D",
+        "prevChunkIds": []
+      },
+      "833": {
+        "chunkId": "4feddb",
+        "hash": "bfe8cd59",
+        "encoded": "tests/test_health.py::TestHealthEndpoint::test_health_response_time%20PASSED%20%20%20%20%5B%206%25%5D",
+        "prevChunkIds": []
+      },
+      "834": {
+        "chunkId": "4feddb",
+        "hash": "f920bb89",
+        "encoded": "tests/test_quote.py::TestQuoteEndpoint::test_quote_valid_ticker%20PASSED%20%20%20%20%20%20%20%20%5B%208%25%5D",
+        "prevChunkIds": []
+      },
+      "835": {
+        "chunkId": "4feddb",
+        "hash": "226f54c0",
+        "encoded": "tests/test_quote.py::TestQuoteEndpoint::test_quote_multiple_tickers%5BAAPL%5D%20PASSED%20%5B11%25%5D",
+        "prevChunkIds": []
+      },
+      "836": {
+        "chunkId": "4feddb",
+        "hash": "7d614ceb",
+        "encoded": "tests/test_candles.py::TestCandlesEndpoint::test_candles_default_days%20PASSED%20%20%5B13%25%5D",
+        "prevChunkIds": []
+      },
+      "837": {
+        "chunkId": "4feddb",
+        "hash": "9f04defd",
+        "encoded": "...",
+        "prevChunkIds": []
+      },
+      "839": {
+        "chunkId": "4feddb",
+        "hash": "38b837f4",
+        "encoded": "==========================%2045%20passed%20in%2012.34s%20===================================",
+        "prevChunkIds": []
+      },
+      "840": {
+        "chunkId": "4feddb",
+        "hash": "58ff9584",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "842": {
+        "chunkId": "4feddb",
+        "hash": "6a97dd86",
+        "encoded": "##%20Best%20Practices",
+        "prevChunkIds": []
+      },
+      "844": {
+        "chunkId": "4feddb",
+        "hash": "606ecb5e",
+        "encoded": "1.%20**Test%20Isolation**:%20Each%20test%20should%20be%20independent%20and%20not%20rely%20on%20others",
+        "prevChunkIds": []
+      },
+      "845": {
+        "chunkId": "4feddb",
+        "hash": "d0f3ec44",
+        "encoded": "2.%20**Fixtures**:%20Use%20pytest%20fixtures%20for%20common%20setup%20(server,%20client,%20test%20data)",
+        "prevChunkIds": []
+      },
+      "846": {
+        "chunkId": "4feddb",
+        "hash": "b837d8ab",
+        "encoded": "3.%20**Parametrization**:%20Test%20multiple%20scenarios%20with%20%60@pytest.mark.parametrize%60",
+        "prevChunkIds": []
+      },
+      "847": {
+        "chunkId": "4feddb",
+        "hash": "e89498e2",
+        "encoded": "4.%20**Markers**:%20Organize%20tests%20with%20custom%20markers%20(smoke,%20integration,%20performance)",
+        "prevChunkIds": []
+      },
+      "848": {
+        "chunkId": "4feddb",
+        "hash": "5c25f306",
+        "encoded": "5.%20**Schema%20Validation**:%20Use%20Pydantic%20models%20to%20validate%20response%20structures",
+        "prevChunkIds": []
+      },
+      "849": {
+        "chunkId": "4feddb",
+        "hash": "9e753dd6",
+        "encoded": "6.%20**Error%20Testing**:%20Always%20test%20error%20cases%20and%20edge%20conditions",
+        "prevChunkIds": []
+      },
+      "850": {
+        "chunkId": "4feddb",
+        "hash": "6f2f2d61",
+        "encoded": "7.%20**Performance**:%20Set%20reasonable%20timeouts%20and%20measure%20response%20times",
+        "prevChunkIds": []
+      },
+      "851": {
+        "chunkId": "4feddb",
+        "hash": "3ad633f4",
+        "encoded": "8.%20**CI/CD**:%20Automate%20tests%20in%20GitHub%20Actions%20for%20every%20commit",
+        "prevChunkIds": []
+      },
+      "852": {
+        "chunkId": "4feddb",
+        "hash": "32eecebe",
+        "encoded": "9.%20**Coverage**:%20Aim%20for%20%3E80%25%20code%20coverage",
+        "prevChunkIds": []
+      },
+      "853": {
+        "chunkId": "4feddb",
+        "hash": "7a423c3c",
+        "encoded": "10.%20**Documentation**:%20Keep%20test%20names%20descriptive%20and%20add%20docstrings",
+        "prevChunkIds": []
+      },
+      "855": {
+        "chunkId": "4feddb",
+        "hash": "d66425ff",
+        "encoded": "##%20Troubleshooting",
+        "prevChunkIds": []
+      },
+      "857": {
+        "chunkId": "4feddb",
+        "hash": "bc66072d",
+        "encoded": "###%20Server%20not%20starting",
+        "prevChunkIds": []
+      },
+      "858": {
+        "chunkId": "4feddb",
+        "hash": "b212cefe",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "859": {
+        "chunkId": "4feddb",
+        "hash": "c1dbed8f",
+        "encoded": "#%20Check%20if%20port%20is%20already%20in%20use",
+        "prevChunkIds": []
+      },
+      "860": {
+        "chunkId": "4feddb",
+        "hash": "b7c48edd",
+        "encoded": "lsof%20-i%20:8000%20%20#%20macOS/Linux",
+        "prevChunkIds": []
+      },
+      "861": {
+        "chunkId": "4feddb",
+        "hash": "5c92b388",
+        "encoded": "netstat%20-ano%20%7C%20findstr%20:8000%20%20#%20Windows",
+        "prevChunkIds": []
+      },
+      "863": {
+        "chunkId": "4feddb",
+        "hash": "af14d208",
+        "encoded": "#%20Kill%20existing%20process",
+        "prevChunkIds": []
+      },
+      "864": {
+        "chunkId": "4feddb",
+        "hash": "42d2202e",
+        "encoded": "kill%20%3CPID%3E",
+        "prevChunkIds": []
+      },
+      "865": {
+        "chunkId": "4feddb",
+        "hash": "0a41110b",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "867": {
+        "chunkId": "4feddb",
+        "hash": "a981a406",
+        "encoded": "###%20Tests%20timing%20out",
+        "prevChunkIds": []
+      },
+      "868": {
+        "chunkId": "4feddb",
+        "hash": "51baf102",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "869": {
+        "chunkId": "4feddb",
+        "hash": "5f31e4c3",
+        "encoded": "#%20Increase%20timeout%20in%20conftest.py%20or%20use%20faster%20ticker",
+        "prevChunkIds": []
+      },
+      "870": {
+        "chunkId": "4feddb",
+        "hash": "0bb6e373",
+        "encoded": "#%20Or%20run%20against%20remote%20server%20instead%20of%20local",
+        "prevChunkIds": []
+      },
+      "871": {
+        "chunkId": "4feddb",
+        "hash": "bdab63a3",
+        "encoded": "TEST_BASE_URL=https://yfinance-api.onrender.com%20pytest%20tests/",
+        "prevChunkIds": []
+      },
+      "872": {
+        "chunkId": "4feddb",
+        "hash": "fe5cd12c",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "874": {
+        "chunkId": "4feddb",
+        "hash": "9df23938",
+        "encoded": "###%20Import%20errors",
+        "prevChunkIds": []
+      },
+      "875": {
+        "chunkId": "4feddb",
+        "hash": "2798b695",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "876": {
+        "chunkId": "4feddb",
+        "hash": "167ebf9e",
+        "encoded": "#%20Ensure%20PYTHONPATH%20includes%20project%20root",
+        "prevChunkIds": []
+      },
+      "877": {
+        "chunkId": "4feddb",
+        "hash": "2845f3d7",
+        "encoded": "export%20PYTHONPATH=%22$%7BPYTHONPATH%7D:$(pwd)%22",
+        "prevChunkIds": []
+      },
+      "878": {
+        "chunkId": "4feddb",
+        "hash": "f2a86bbd",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "880": {
+        "chunkId": "4feddb",
+        "hash": "675fcd2d",
+        "encoded": "##%20Summary",
+        "prevChunkIds": []
+      },
+      "882": {
+        "chunkId": "4feddb",
+        "hash": "2f71e0b5",
+        "encoded": "This%20QE%20skill%20provides:",
+        "prevChunkIds": []
+      },
+      "883": {
+        "chunkId": "4feddb",
+        "hash": "1da347ad",
+        "encoded": "-%20%E2%9C%85%20**45+%20comprehensive%20tests**%20covering%20all%20endpoints",
+        "prevChunkIds": []
+      },
+      "884": {
+        "chunkId": "4feddb",
+        "hash": "69c09d77",
+        "encoded": "-%20%E2%9C%85%20**Schema%20validation**%20with%20Pydantic%20models",
+        "prevChunkIds": []
+      },
+      "885": {
+        "chunkId": "4feddb",
+        "hash": "b39c6fe6",
+        "encoded": "-%20%E2%9C%85%20**Edge%20case%20coverage**%20for%20error%20scenarios",
+        "prevChunkIds": []
+      },
+      "886": {
+        "chunkId": "4feddb",
+        "hash": "22a7ab6a",
+        "encoded": "-%20%E2%9C%85%20**Performance%20benchmarks**%20with%20response%20time%20assertions",
+        "prevChunkIds": []
+      },
+      "887": {
+        "chunkId": "4feddb",
+        "hash": "ddfb46ed",
+        "encoded": "-%20%E2%9C%85%20**Authentication%20testing**%20for%20API%20key%20protection",
+        "prevChunkIds": []
+      },
+      "888": {
+        "chunkId": "4feddb",
+        "hash": "ef3e2591",
+        "encoded": "-%20%E2%9C%85%20**CI/CD%20integration**%20with%20GitHub%20Actions",
+        "prevChunkIds": []
+      },
+      "889": {
+        "chunkId": "4feddb",
+        "hash": "d22a67c3",
+        "encoded": "-%20%E2%9C%85%20**HTML%20reports**%20with%20coverage%20metrics",
+        "prevChunkIds": []
+      },
+      "890": {
+        "chunkId": "4feddb",
+        "hash": "57b9f820",
+        "encoded": "-%20%E2%9C%85%20**Parametrized%20tests**%20for%20multiple%20scenarios",
+        "prevChunkIds": []
+      },
+      "891": {
+        "chunkId": "4feddb",
+        "hash": "632b3526",
+        "encoded": "-%20%E2%9C%85%20**Concurrent%20request%20testing**%20for%20load%20validation",
+        "prevChunkIds": []
+      },
+      "892": {
+        "chunkId": "4feddb",
+        "hash": "eb4e3e92",
+        "encoded": "-%20%E2%9C%85%20**Marker-based%20organization**%20for%20selective%20test%20execution",
+        "prevChunkIds": []
+      },
+      "894": {
+        "chunkId": "4feddb",
+        "hash": "06094396",
+        "encoded": "Run%20%60pytest%20tests/%20-v%20--cov=app%20--html=report.html%60%20to%20execute%20the%20full%20test%20suite!",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,510 @@
+{
+  ".slingshot\\skills\\verifier-api.md": {
+    "filename": "verifier-api.md",
+    "path": ".slingshot\\skills\\verifier-api.md",
+    "version": "1.2",
+    "contextFile": "0c67ae7b-context.json",
+    "chunks": {
+      "24984c": {
+        "user": "You",
+        "model": "gpt-4o",
+        "timestamp": 1780914077,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.2",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {
+          "promptMessage": "a6e81aba"
+        },
+        "hash": "6e5e8ee3",
+        "messageId": "system_41a4a370-6323-11f1-9164-3971691abb57",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: You\n- **model**: gpt-4o\n- **timestamp**: 6/8/2026, 3:51:17 PM\n- **source**: agent\n- **type**: agentWriteTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "24984c",
+        "hash": "f31a71df",
+        "encoded": "#%20verifier-api%20%E2%80%94%20yfinance-api%20Server%20Verifier",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "24984c",
+        "hash": "424f2a8c",
+        "encoded": "Launches%20the%20FastAPI%20server,%20exercises%20every%20endpoint%20against%20a%20real",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "24984c",
+        "hash": "0a4fa7bf",
+        "encoded": "ticker,%20captures%20raw%20responses,%20then%20tears%20down.%20Use%20this%20skill%20any",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "24984c",
+        "hash": "72aba5dc",
+        "encoded": "time%20you%20need%20to%20verify%20the%20yfinance-api%20is%20working%20correctly.",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "24984c",
+        "hash": "4912acc4",
+        "encoded": "##%20Setup",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "24984c",
+        "hash": "25ea0de0",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "24984c",
+        "hash": "0b283688",
+        "encoded": "#%20Activate%20the%20venv%20and%20start%20the%20server%20in%20the%20background",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "24984c",
+        "hash": "62cc34e5",
+        "encoded": "cd%20c:/amit/ai-handson/yfinance-api",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "24984c",
+        "hash": "dc764d14",
+        "encoded": "source%20venv/Scripts/activate",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "24984c",
+        "hash": "e83eacb7",
+        "encoded": "uvicorn%20app.main:app%20--host%200.0.0.0%20--port%208765%20&",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "24984c",
+        "hash": "3b64222e",
+        "encoded": "SERVER_PID=$!",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "24984c",
+        "hash": "776c3415",
+        "encoded": "sleep%205%20%20%20#%20give%20uvicorn%20time%20to%20bind",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "24984c",
+        "hash": "79694f27",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "24984c",
+        "hash": "9b10dbe4",
+        "encoded": "##%20Drive",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "24984c",
+        "hash": "f7571d0d",
+        "encoded": "Run%20each%20curl%20against%20%60http://localhost:8765%60.%20Capture%20full%20response%20bodies.",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "24984c",
+        "hash": "0dd3544e",
+        "encoded": "###%201.%20Health%20check",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "24984c",
+        "hash": "1848f8f9",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "24984c",
+        "hash": "ab27aede",
+        "encoded": "curl%20-s%20http://localhost:8765/health",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "24984c",
+        "hash": "149ea669",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "24984c",
+        "hash": "c7c33efe",
+        "encoded": "###%202.%20Root%20%E2%80%94%20endpoint%20directory",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "24984c",
+        "hash": "e2591a6d",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "24984c",
+        "hash": "e2c8412c",
+        "encoded": "curl%20-s%20http://localhost:8765/",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "24984c",
+        "hash": "5d2de7a5",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "24984c",
+        "hash": "dd5bc6a2",
+        "encoded": "###%203.%20Quote%20%E2%80%94%20latest%20price%20(use%20AAPL%20as%20a%20known-good%20ticker)",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "24984c",
+        "hash": "992a1d5e",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "24984c",
+        "hash": "e0c83869",
+        "encoded": "curl%20-s%20http://localhost:8765/quote/AAPL",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "24984c",
+        "hash": "1345d99c",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "24984c",
+        "hash": "98210903",
+        "encoded": "###%204.%20Candles%20%E2%80%94%20OHLCV%20history%20(default%2060%20days)",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "24984c",
+        "hash": "9fb99b03",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "24984c",
+        "hash": "1834626e",
+        "encoded": "curl%20-s%20http://localhost:8765/candles/AAPL?days=10",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "24984c",
+        "hash": "ee3aeb44",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "24984c",
+        "hash": "228b83de",
+        "encoded": "###%205.%20Indicators%20%E2%80%94%20all%20technical%20indicators",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "24984c",
+        "hash": "37bd9c38",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "24984c",
+        "hash": "9ed54522",
+        "encoded": "curl%20-s%20%22http://localhost:8765/indicators/AAPL?tail=5%22",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "24984c",
+        "hash": "32bfda31",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "24984c",
+        "hash": "b6d12dfa",
+        "encoded": "###%206.%20News%20%E2%80%94%20headlines",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "24984c",
+        "hash": "07e3f928",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "24984c",
+        "hash": "d8fa9caa",
+        "encoded": "curl%20-s%20%22http://localhost:8765/news/AAPL?limit=3%22",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "24984c",
+        "hash": "9aeea603",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "24984c",
+        "hash": "3ae37dc7",
+        "encoded": "##%20Probes%20(edge%20cases)",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "24984c",
+        "hash": "97fda898",
+        "encoded": "###%207.%20Invalid%20ticker%20%E2%80%94%20expect%20404",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "24984c",
+        "hash": "cf8047b9",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "24984c",
+        "hash": "7ffa75fc",
+        "encoded": "curl%20-s%20-o%20/dev/null%20-w%20%22%25%7Bhttp_code%7D%22%20http://localhost:8765/quote/INVALIDTICKER999",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "24984c",
+        "hash": "4864eb05",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "24984c",
+        "hash": "e3ec22fa",
+        "encoded": "###%208.%20API%20key%20protection%20%E2%80%94%20set%20a%20key,%20then%20test%20with%20and%20without%20it",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "24984c",
+        "hash": "e3c4d607",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "24984c",
+        "hash": "db786931",
+        "encoded": "#%20Start%20a%20second%20instance%20with%20a%20key%20set%20(skip%20if%20testing%20is%20already%20done%20above)",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "24984c",
+        "hash": "7576d319",
+        "encoded": "#%20Instead,%20test%20the%20_check_key%20guard%20by%20calling%20the%20running%20server",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "24984c",
+        "hash": "4d2dc5b5",
+        "encoded": "#%20with%20?api_key=%20when%20API_KEY%20env%20var%20is%20NOT%20set%20(should%20always%20pass%20through)",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "24984c",
+        "hash": "fbc2ced3",
+        "encoded": "curl%20-s%20%22http://localhost:8765/quote/AAPL?api_key=anything%22",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "24984c",
+        "hash": "23226bcb",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "24984c",
+        "hash": "b0224152",
+        "encoded": "###%209.%20Candles%20boundary%20%E2%80%94%20minimum%20days",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "24984c",
+        "hash": "931cfa67",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "24984c",
+        "hash": "a37e3572",
+        "encoded": "curl%20-s%20%22http://localhost:8765/candles/AAPL?days=5%22",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "24984c",
+        "hash": "19eee76e",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "24984c",
+        "hash": "df063da0",
+        "encoded": "##%20Teardown",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "24984c",
+        "hash": "34c5a2f0",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "24984c",
+        "hash": "99151b2a",
+        "encoded": "kill%20$SERVER_PID%202%3E/dev/null",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "24984c",
+        "hash": "f95f11be",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "24984c",
+        "hash": "a7832643",
+        "encoded": "##%20Report%20format",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "24984c",
+        "hash": "242571e4",
+        "encoded": "Follow%20the%20standard%20verify%20skill%20report:",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "24984c",
+        "hash": "94e37d99",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "24984c",
+        "hash": "e7d48ccb",
+        "encoded": "##%20Verification:%20yfinance-api%20endpoints",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "24984c",
+        "hash": "50e14c97",
+        "encoded": "**Verdict:**%20PASS%20%7C%20FAIL%20%7C%20BLOCKED",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "24984c",
+        "hash": "14976fec",
+        "encoded": "**Claim:**%20All%20four%20data%20endpoints%20(quote,%20candles,%20indicators,%20news)",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "24984c",
+        "hash": "36b9868a",
+        "encoded": "return%20valid%20JSON%20with%20expected%20fields%20for%20a%20real%20ticker%20symbol.",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "24984c",
+        "hash": "ff7794e8",
+        "encoded": "**Method:**%20Cold-start%20uvicorn%20on%20port%208765,%20curl%20each%20route,%20kill%20server.",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "24984c",
+        "hash": "bc6d69a7",
+        "encoded": "###%20Steps",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "24984c",
+        "hash": "71825109",
+        "encoded": "1.%20%E2%9C%85/%E2%9D%8C%20health%20%E2%86%92%20...",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "24984c",
+        "hash": "9622c543",
+        "encoded": "2.%20%E2%9C%85/%E2%9D%8C%20root%20%E2%86%92%20...",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "24984c",
+        "hash": "14bec02e",
+        "encoded": "3.%20%E2%9C%85/%E2%9D%8C%20quote/AAPL%20%E2%86%92%20...",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "24984c",
+        "hash": "5ebcc483",
+        "encoded": "4.%20%E2%9C%85/%E2%9D%8C%20candles/AAPL?days=10%20%E2%86%92%20...",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "24984c",
+        "hash": "4b833a66",
+        "encoded": "5.%20%E2%9C%85/%E2%9D%8C%20indicators/AAPL?tail=5%20%E2%86%92%20...",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "24984c",
+        "hash": "08c29d54",
+        "encoded": "6.%20%E2%9C%85/%E2%9D%8C%20news/AAPL?limit=3%20%E2%86%92%20...",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "24984c",
+        "hash": "5904aeab",
+        "encoded": "%F0%9F%94%8D%20invalid%20ticker%20%E2%86%92%20...",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "24984c",
+        "hash": "46351bb1",
+        "encoded": "%F0%9F%94%8D%20api_key%20passthrough%20%E2%86%92%20...",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "24984c",
+        "hash": "200a6f34",
+        "encoded": "%F0%9F%94%8D%20candles%20min%20days%20%E2%86%92%20...",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "24984c",
+        "hash": "8a80bda7",
+        "encoded": "###%20Findings",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "24984c",
+        "hash": "49434b06",
+        "encoded": "%3Canything%20that%20made%20you%20pause%3E",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "24984c",
+        "hash": "062ff69e",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

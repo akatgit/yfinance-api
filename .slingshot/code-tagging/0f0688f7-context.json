@@ -1,0 +1,15 @@
+{
+  "filename": "qe-api-testing.md",
+  "path": ".claude\\skills\\qe-api-testing.md",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "fe3a0c27": {
+      "value": "please create a QE skill to test these api"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

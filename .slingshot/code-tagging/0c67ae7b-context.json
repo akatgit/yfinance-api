@@ -1,0 +1,15 @@
+{
+  "filename": "verifier-api.md",
+  "path": ".slingshot\\skills\\verifier-api.md",
+  "version": "1.1",
+  "files": {},
+  "promptMessage": {
+    "a6e81aba": {
+      "value": "but for skill generate by slingshot  should not be within .slingshot folder instead .claude as these being created but claude. this way claude can perfom claude specific skill and slingshot will perform skill created for slingshot excetution."
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}
