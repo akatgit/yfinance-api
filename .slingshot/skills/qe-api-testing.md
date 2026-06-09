@@ -13,6 +13,9 @@ This QE skill creates a complete test automation framework for the yfinance-api 
 - **Edge case testing** for invalid inputs, boundary conditions, and error scenarios
 - **Performance testing** for response times
 - **API key authentication testing**
+- **Sentiment analysis validation** for news articles with VADER scores
+- **Buzz endpoint testing** for media attention scoring
+- **Extended indicator testing** covering all 11 technical indicators (RSI, MACD, Bollinger, ADX, ATR, SMA-50, CCI, Stochastic, OBV, VWAP, EMA-20)
 - **CI/CD ready** with GitHub Actions integration
 - **Test reports** with coverage and HTML output
 
@@ -44,8 +47,9 @@ tests/
 ├── test_health.py           # Health and root endpoint tests
 ├── test_quote.py            # Quote endpoint tests
 ├── test_candles.py          # Candles endpoint tests
-├── test_indicators.py       # Technical indicators tests
-├── test_news.py             # News endpoint tests
+├── test_indicators.py       # Technical indicators tests (11 indicators)
+├── test_news.py             # News endpoint tests with sentiment validation
+├── test_buzz.py             # Buzz endpoint tests for media attention scoring
 ├── test_authentication.py   # API key protection tests
 ├── test_edge_cases.py       # Error handling and boundary tests
 ├── test_performance.py      # Response time and load tests
@@ -212,32 +216,83 @@ class CandlesResponse(BaseModel):
     symbol: str
     candles: List[CandleData]
 
-class IndicatorData(BaseModel):
+class IndicatorPoint(BaseModel):
     date: str
-    rsi: Optional[float] = None
+    value: Optional[float] = None
+
+class MACDPoint(BaseModel):
+    date: str
     macd: Optional[float] = None
-    macd_signal: Optional[float] = None
-    macd_histogram: Optional[float] = None
-    bb_upper: Optional[float] = None
-    bb_middle: Optional[float] = None
-    bb_lower: Optional[float] = None
-    adx: Optional[float] = None
-    atr: Optional[float] = None
-    sma_50: Optional[float] = None
+    signal: Optional[float] = None
+    histogram: Optional[float] = None
+
+class BollingerPoint(BaseModel):
+    date: str
+    upper: Optional[float] = None
+    middle: Optional[float] = None
+    lower: Optional[float] = None
+
+class StochasticPoint(BaseModel):
+    date: str
+    k: Optional[float] = None
+    d: Optional[float] = None
 
 class IndicatorsResponse(BaseModel):
     symbol: str
-    indicators: List[IndicatorData]
+    as_of: str
+    current_price: Optional[float] = None
+    rsi_14: List[IndicatorPoint]
+    macd: List[MACDPoint]
+    bollinger_bands_20: List[BollingerPoint]
+    adx_14: List[IndicatorPoint]
+    atr_14: List[IndicatorPoint]
+    sma_50: List[IndicatorPoint]
+    cci_20: List[IndicatorPoint]
+    stochastic_14: List[StochasticPoint]
+    obv: List[IndicatorPoint]
+    vwap: List[IndicatorPoint]
+    ema_20: List[IndicatorPoint]
+
+class ArticleSentiment(BaseModel):
+    compound: float
+    positive: float
+    negative: float
+    neutral: float
+    label: str
+
+class NewsSentimentSummary(BaseModel):
+    avg_compound: Optional[float] = None
+    positive_count: int
+    negative_count: int
+    neutral_count: int
+    positive_pct: float
+    negative_pct: float
+    bullish_ratio: Optional[float] = None
+    overall_label: str
 
 class NewsItem(BaseModel):
-    title: str
-    link: Optional[str] = None
-    published: Optional[str] = None
+    headline: str
+    summary: Optional[str] = None
     source: Optional[str] = None
+    published: Optional[str] = None
+    url: Optional[str] = None
+    sentiment: ArticleSentiment
 
 class NewsResponse(BaseModel):
     symbol: str
-    news: List[NewsItem]
+    count: int
+    sentiment_summary: NewsSentimentSummary
+    articles: List[NewsItem]
+
+class BuzzDetail(BaseModel):
+    news_articles: int
+    total_mentions: int
+    attention_level: str
+    interpretation: str
+
+class BuzzResponse(BaseModel):
+    symbol: str
+    buzz: BuzzDetail
 
 class ErrorResponse(BaseModel):
     detail: str
@@ -296,9 +351,9 @@ class TestRootEndpoint:
         assert len(root.endpoints) > 0
         
         # Check for expected endpoints
-        expected_endpoints = ["/health", "/quote", "/candles", "/indicators", "/news"]
+        expected_endpoints = ["/quote", "/candles", "/indicators", "/news", "/buzz"]
         for endpoint in expected_endpoints:
-            assert any(endpoint in e for e in root.endpoints), f"Missing {endpoint}"
+            assert endpoint in data["endpoints"], f"Missing {endpoint}"
 ```
 
 ### 4. Quote Endpoint Tests (tests/test_quote.py)
