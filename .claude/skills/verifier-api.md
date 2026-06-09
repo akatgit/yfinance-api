@@ -44,19 +44,24 @@ curl -s http://localhost:8765/candles/AAPL?days=10
 curl -s "http://localhost:8765/indicators/AAPL?tail=5"
 ```
 
-### 6. News — headlines
+### 6. News — headlines with sentiment
 ```bash
 curl -s "http://localhost:8765/news/AAPL?limit=3"
 ```
 
+### 7. Buzz — media attention score
+```bash
+curl -s http://localhost:8765/buzz/AAPL
+```
+
 ## Probes (edge cases)
 
-### 7. Invalid ticker — expect 404
+### 8. Invalid ticker — expect 404
 ```bash
 curl -s -o /dev/null -w "%{http_code}" http://localhost:8765/quote/INVALIDTICKER999
 ```
 
-### 8. API key protection — set a key, then test with and without it
+### 9. API key protection — set a key, then test with and without it
 ```bash
 # Start a second instance with a key set (skip if testing is already done above)
 # Instead, test the _check_key guard by calling the running server
@@ -64,9 +69,14 @@ curl -s -o /dev/null -w "%{http_code}" http://localhost:8765/quote/INVALIDTICKER
 curl -s "http://localhost:8765/quote/AAPL?api_key=anything"
 ```
 
-### 9. Candles boundary — minimum days
+### 10. Candles boundary — minimum days
 ```bash
 curl -s "http://localhost:8765/candles/AAPL?days=5"
+```
+
+### 11. Buzz with low-volume ticker (expect low attention)
+```bash
+curl -s http://localhost:8765/buzz/ZZZZ
 ```
 
 ## Teardown
@@ -84,7 +94,7 @@ Follow the standard verify skill report:
 
 **Verdict:** PASS | FAIL | BLOCKED
 
-**Claim:** All four data endpoints (quote, candles, indicators, news)
+**Claim:** All five data endpoints (quote, candles, indicators, news, buzz)
 return valid JSON with expected fields for a real ticker symbol.
 
 **Method:** Cold-start uvicorn on port 8765, curl each route, kill server.
@@ -96,9 +106,11 @@ return valid JSON with expected fields for a real ticker symbol.
 4. ✅/❌ candles/AAPL?days=10 → ...
 5. ✅/❌ indicators/AAPL?tail=5 → ...
 6. ✅/❌ news/AAPL?limit=3 → ...
+7. ✅/❌ buzz/AAPL → ...
 🔍 invalid ticker → ...
 🔍 api_key passthrough → ...
 🔍 candles min days → ...
+🔍 buzz low-volume ticker → ...
 
 ### Findings
 <anything that made you pause>

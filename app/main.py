@@ -9,11 +9,12 @@ import os
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Query
-
-load_dotenv()
 from fastapi.middleware.cors import CORSMiddleware
 
+load_dotenv()
+
 from app.models.schemas import (
+    BuzzResponse,
     CandlesResponse,
     IndicatorsResponse,
     NewsResponse,
@@ -32,7 +33,6 @@ app = FastAPI(
     version="1.0.0",
 )
 
-# Allow Bodhi (or any client) to call this API from anywhere.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -41,7 +41,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Optional simple API key protection. Set API_KEY env var to enable.
 API_KEY = os.getenv("API_KEY", "")
 
 
@@ -49,6 +48,10 @@ def _check_key(provided: str | None) -> None:
     if API_KEY and provided != API_KEY:
         raise HTTPException(status_code=401, detail="Invalid or missing API key")
 
+
+# ---------------------------------------------------------------------------
+# Meta
+# ---------------------------------------------------------------------------
 
 @app.get("/", tags=["meta"])
 def root():
@@ -61,6 +64,7 @@ def root():
             "candles": "/candles/{symbol}?days=60",
             "indicators": "/indicators/{symbol}?tail=15",
             "news": "/news/{symbol}?limit=30",
+            "buzz": "/buzz/{symbol}",
         },
     }
 
@@ -70,6 +74,10 @@ def health():
     return {"status": "healthy"}
 
 
+# ---------------------------------------------------------------------------
+# Technical
+# ---------------------------------------------------------------------------
+
 @app.get("/quote/{symbol}", response_model=QuoteResponse, tags=["technical"])
 def quote(symbol: str, api_key: str | None = Query(default=None)):
     """Latest price quote for a symbol."""
@@ -78,7 +86,7 @@ def quote(symbol: str, api_key: str | None = Query(default=None)):
         return get_quote(symbol)
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc))
-    except Exception as exc:  # noqa: BLE001
+    except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Quote error: {exc}")
 
 
@@ -94,7 +102,7 @@ def candles(
         return get_candles(symbol, days=days)
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc))
-    except Exception as exc:  # noqa: BLE001
+    except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Candles error: {exc}")
 
 
@@ -104,15 +112,19 @@ def indicators(
     tail: int = Query(default=15, ge=1, le=60),
     api_key: str | None = Query(default=None),
 ):
-    """All technical indicators (RSI, MACD, Bollinger, ADX, ATR, SMA-50) in one call."""
+    """RSI, MACD, Bollinger, ADX, ATR, SMA-50, CCI, Stochastic, OBV, VWAP, EMA-20."""
     _check_key(api_key)
     try:
         return compute_indicators(symbol, tail=tail)
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc))
-    except Exception as exc:  # noqa: BLE001
+    except Exception as exc:
         raise HTTPException(status_code=500, detail=f"Indicators error: {exc}")
 
+
+# ---------------------------------------------------------------------------
+# Sentiment / News
+# ---------------------------------------------------------------------------
 
 @app.get("/news/{symbol}", response_model=NewsResponse, tags=["sentiment"])
 def news(
@@ -120,12 +132,47 @@ def news(
     limit: int = Query(default=30, ge=1, le=50),
     api_key: str | None = Query(default=None),
 ):
-    """Recent news headlines and summaries for a symbol."""
+    """Recent news headlines with VADER sentiment scores for a symbol."""
     _check_key(api_key)
     try:
         return get_news(symbol, limit=limit)
-    except Exception as exc:  # noqa: BLE001
+    except Exception as exc:
         raise HTTPException(status_code=500, detail=f"News error: {exc}")
+
+
+# ---------------------------------------------------------------------------
+# Buzz
+# ---------------------------------------------------------------------------
+
+@app.get("/buzz/{symbol}", response_model=BuzzResponse, tags=["sentiment"])
+def buzz(symbol: str, api_key: str | None = Query(default=None)):
+    """Media attention score based on news article volume."""
+    _check_key(api_key)
+    try:
+        news_data = get_news(symbol, limit=50)
+        news_count = news_data.get("count", 0)
+    except Exception:
+        news_count = 0
+
+    if news_count >= 40:
+        level = "high"
+        interpretation = "Stock is receiving above-average attention in the news"
+    elif news_count >= 15:
+        level = "moderate"
+        interpretation = "Stock is receiving moderate attention in the news"
+    else:
+        level = "low"
+        interpretation = "Stock is receiving below-average attention in the news"
+
+    return {
+        "symbol": symbol.upper(),
+        "buzz": {
+            "news_articles": news_count,
+            "total_mentions": news_count,
+            "attention_level": level,
+            "interpretation": interpretation,
+        },
+    }
 
 
 if __name__ == "__main__":

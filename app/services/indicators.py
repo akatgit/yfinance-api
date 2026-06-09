@@ -4,9 +4,10 @@ from __future__ import annotations
 from typing import List, Optional
 
 import pandas as pd
-from ta.momentum import RSIIndicator
-from ta.trend import MACD, ADXIndicator, SMAIndicator
+from ta.momentum import RSIIndicator, StochasticOscillator
+from ta.trend import MACD, ADXIndicator, CCIIndicator, EMAIndicator, SMAIndicator
 from ta.volatility import AverageTrueRange, BollingerBands
+from ta.volume import OnBalanceVolumeIndicator, VolumeWeightedAveragePrice
 
 from app.services.market_data import get_history_df
 
@@ -31,7 +32,7 @@ def _series_to_points(dates, series, tail: int) -> List[dict]:
 
 
 def compute_indicators(symbol: str, tail: int = 15) -> dict:
-    """Compute RSI, MACD, Bollinger Bands, ADX, ATR, and SMA-50.
+    """Compute RSI, MACD, Bollinger Bands, ADX, ATR, SMA-50, CCI, Stochastic, OBV, VWAP, EMA-20.
 
     Returns the last `tail` values for each indicator so the agent can
     assess recent trends, not just the latest snapshot.
@@ -41,7 +42,10 @@ def compute_indicators(symbol: str, tail: int = 15) -> dict:
     close = df["Close"]
     high = df["High"]
     low = df["Low"]
+    volume = df["Volume"]
     dates = df.index
+
+    # --- Original 6 indicators ---
 
     # RSI (14)
     rsi = RSIIndicator(close=close, window=14).rsi()
@@ -66,6 +70,27 @@ def compute_indicators(symbol: str, tail: int = 15) -> dict:
 
     # SMA (50)
     sma50 = SMAIndicator(close=close, window=50).sma_indicator()
+
+    # --- 5 new indicators ---
+
+    # CCI (20)
+    cci = CCIIndicator(high=high, low=low, close=close, window=20).cci()
+
+    # Stochastic Oscillator (14, smooth 3)
+    stoch = StochasticOscillator(high=high, low=low, close=close, window=14, smooth_window=3)
+    stoch_k = stoch.stoch()
+    stoch_d = stoch.stoch_signal()
+
+    # OBV
+    obv = OnBalanceVolumeIndicator(close=close, volume=volume).on_balance_volume()
+
+    # VWAP
+    vwap = VolumeWeightedAveragePrice(
+        high=high, low=low, close=close, volume=volume
+    ).volume_weighted_average_price()
+
+    # EMA (20)
+    ema20 = EMAIndicator(close=close, window=20).ema_indicator()
 
     # Build MACD points
     macd_points = []
@@ -101,6 +126,17 @@ def compute_indicators(symbol: str, tail: int = 15) -> dict:
             }
         )
 
+    # Build Stochastic points
+    stoch_points = []
+    for d, k, dd in zip(dates[-tail:], stoch_k.iloc[-tail:], stoch_d.iloc[-tail:]):
+        stoch_points.append(
+            {
+                "date": d.strftime("%Y-%m-%d"),
+                "k": _round(k),
+                "d": _round(dd),
+            }
+        )
+
     return {
         "symbol": symbol.upper(),
         "as_of": dates[-1].strftime("%Y-%m-%d"),
@@ -111,4 +147,9 @@ def compute_indicators(symbol: str, tail: int = 15) -> dict:
         "adx_14": _series_to_points(dates, adx, tail),
         "atr_14": _series_to_points(dates, atr, tail),
         "sma_50": _series_to_points(dates, sma50, tail),
+        "cci_20": _series_to_points(dates, cci, tail),
+        "stochastic_14": stoch_points,
+        "obv": _series_to_points(dates, obv, tail),
+        "vwap": _series_to_points(dates, vwap, tail),
+        "ema_20": _series_to_points(dates, ema20, tail),
     }

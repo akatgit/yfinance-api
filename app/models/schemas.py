@@ -5,6 +5,10 @@ from typing import List, Optional
 from pydantic import BaseModel
 
 
+# ---------------------------------------------------------------------------
+# Quote
+# ---------------------------------------------------------------------------
+
 class QuoteResponse(BaseModel):
     symbol: str
     price: Optional[float] = None
@@ -18,6 +22,10 @@ class QuoteResponse(BaseModel):
     currency: Optional[str] = None
     timestamp: Optional[str] = None
 
+
+# ---------------------------------------------------------------------------
+# Candles
+# ---------------------------------------------------------------------------
 
 class Candle(BaseModel):
     date: str
@@ -34,6 +42,10 @@ class CandlesResponse(BaseModel):
     count: int
     candles: List[Candle]
 
+
+# ---------------------------------------------------------------------------
+# Indicators
+# ---------------------------------------------------------------------------
 
 class IndicatorPoint(BaseModel):
     date: str
@@ -54,6 +66,12 @@ class BollingerPoint(BaseModel):
     lower: Optional[float] = None
 
 
+class StochasticPoint(BaseModel):
+    date: str
+    k: Optional[float] = None
+    d: Optional[float] = None
+
+
 class IndicatorsResponse(BaseModel):
     symbol: str
     as_of: str
@@ -64,6 +82,34 @@ class IndicatorsResponse(BaseModel):
     adx_14: List[IndicatorPoint]
     atr_14: List[IndicatorPoint]
     sma_50: List[IndicatorPoint]
+    cci_20: List[IndicatorPoint]
+    stochastic_14: List[StochasticPoint]
+    obv: List[IndicatorPoint]
+    vwap: List[IndicatorPoint]
+    ema_20: List[IndicatorPoint]
+
+
+# ---------------------------------------------------------------------------
+# News
+# ---------------------------------------------------------------------------
+
+class ArticleSentiment(BaseModel):
+    compound: float
+    positive: float
+    negative: float
+    neutral: float
+    label: str
+
+
+class NewsSentimentSummary(BaseModel):
+    avg_compound: Optional[float] = None
+    positive_count: int
+    negative_count: int
+    neutral_count: int
+    positive_pct: float
+    negative_pct: float
+    bullish_ratio: Optional[float] = None
+    overall_label: str
 
 
 class NewsItem(BaseModel):
@@ -72,13 +118,35 @@ class NewsItem(BaseModel):
     source: Optional[str] = None
     published: Optional[str] = None
     url: Optional[str] = None
+    sentiment: ArticleSentiment
 
 
 class NewsResponse(BaseModel):
     symbol: str
     count: int
+    sentiment_summary: NewsSentimentSummary
     articles: List[NewsItem]
 
+
+# ---------------------------------------------------------------------------
+# Buzz
+# ---------------------------------------------------------------------------
+
+class BuzzDetail(BaseModel):
+    news_articles: int
+    total_mentions: int
+    attention_level: str
+    interpretation: str
+
+
+class BuzzResponse(BaseModel):
+    symbol: str
+    buzz: BuzzDetail
+
+
+# ---------------------------------------------------------------------------
+# Error
+# ---------------------------------------------------------------------------
 
 class ErrorResponse(BaseModel):
     error: str

@@ -1,7 +1,7 @@
 # yFinance Market Data API
 
 A lightweight **FastAPI** service providing free market data powered by **yfinance**
-(no API key required) and the **ta** library for technical indicators.
+and the **ta** library for technical indicators, with **VADER sentiment analysis** on news headlines.
 
 ---
 
@@ -13,10 +13,11 @@ A lightweight **FastAPI** service providing free market data powered by **yfinan
 | GET | `/health` | Simple health check |
 | GET | `/quote/{symbol}` | Latest price quote |
 | GET | `/candles/{symbol}?days=60` | Daily OHLCV candles |
-| GET | `/indicators/{symbol}?tail=15` | RSI, MACD, Bollinger, ADX, ATR, SMA-50 — all in one call |
-| GET | `/news/{symbol}?limit=30` | Recent news headlines |
+| GET | `/indicators/{symbol}?tail=15` | 11 technical indicators in one call (RSI, MACD, Bollinger, ADX, ATR, SMA-50, CCI, Stochastic, OBV, VWAP, EMA-20) |
+| GET | `/news/{symbol}?limit=30` | Recent news headlines with per-article VADER sentiment scores |
+| GET | `/buzz/{symbol}` | Media attention level derived from news article volume |
 
-Example: `GET /indicators/AAPL?tail=15`
+Examples: `GET /indicators/AAPL?tail=15` · `GET /news/AAPL?limit=5` · `GET /buzz/AAPL`
 
 ---
 
@@ -93,8 +94,11 @@ curl "http://localhost:8000/candles/AAPL?days=10"
 # All technical indicators — last 5 data points each
 curl "http://localhost:8000/indicators/AAPL?tail=5"
 
-# Recent news headlines — up to 5 articles
+# Recent news headlines with VADER sentiment — up to 5 articles
 curl "http://localhost:8000/news/AAPL?limit=5"
+
+# Media buzz / attention level
+curl http://localhost:8000/buzz/AAPL
 ```
 
 **With API key protection enabled:**
@@ -360,6 +364,154 @@ docker run -p 8000:8000 -e API_KEY=optional-key yfinance-api
 
 ---
 
+## Running Tests
+
+The project includes two types of tests:
+
+1. **Pytest test suite** — comprehensive integration tests with fixtures and markers
+2. **Local smoke test script** — quick validation script using only standard library
+
+### Prerequisites
+
+Install testing dependencies (not included in `requirements.txt`):
+
+```bash
+pip install pytest requests
+```
+
+### Option 1 — Run pytest test suite (recommended)
+
+The pytest suite includes comprehensive tests for all endpoints with proper fixtures,
+parameterization, and test markers.
+
+**Run all tests:**
+
+```bash
+pytest
+```
+
+**Run with verbose output:**
+
+```bash
+pytest -v
+```
+
+**Run specific test markers:**
+
+```bash
+# Smoke tests only (quick validation)
+pytest -m smoke
+
+# Integration tests
+pytest -m integration
+
+# Performance tests
+pytest -m performance
+
+# Edge case tests
+pytest -m edge_case
+```
+
+**Run specific test file:**
+
+```bash
+pytest tests/test_buzz.py -v
+```
+
+**Run with coverage report:**
+
+```bash
+pip install pytest-cov
+pytest --cov=app --cov-report=html
+# Open htmlcov/index.html in your browser
+```
+
+**Test configuration:**
+
+- Tests automatically start the server if running locally (via `conftest.py` fixture)
+- Default base URL: `http://localhost:8000` (override with `TEST_BASE_URL` env var)
+- API key authentication: Set `API_KEY` in `.env` to test protected endpoints
+- Test fixtures include: `base_url`, `api_key`, `test_ticker`, `invalid_ticker`, `http_client`
+
+**Test against deployed instance:**
+
+```bash
+# Test against Render deployment
+TEST_BASE_URL=https://yfinance-api.onrender.com pytest
+
+# Test against GCP Cloud Run
+TEST_BASE_URL=https://yfinance-api-<hash>-uc.a.run.app pytest
+```
+
+### Option 2 — Run local smoke test script
+
+Quick validation script with no external dependencies (uses only standard library).
+
+**Prerequisites:**
+
+1. Start the server in a separate terminal:
+
+```bash
+uvicorn app.main:app --reload --port 8000
+```
+
+2. Run the smoke test:
+
+```bash
+python test_local.py
+```
+
+**Expected output:**
+
+```
+-------------------------------------------------------
+  Meta
+-------------------------------------------------------
+  PASS  GET /health -> 200
+  PASS  health.status == healthy
+  PASS  GET / -> 200
+  ...
+-------------------------------------------------------
+  Summary
+-------------------------------------------------------
+  47/47 checks passed OK
+```
+
+**What it tests:**
+
+- Health check and root endpoint
+- Quote endpoint (valid and invalid tickers)
+- Candles endpoint (day ranges, boundary validation)
+- Indicators endpoint (all 11 technical indicators: RSI, MACD, Bollinger, ADX, ATR, SMA-50, CCI, Stochastic, OBV, VWAP, EMA-20)
+- News endpoint (per-article VADER sentiment, sentiment summary)
+- Buzz endpoint (attention level, interpretation)
+- Removal of deprecated social endpoints (`/social/reddit` returns 404)
+- API key protection (when `API_KEY` env var is set)
+
+### Continuous Integration
+
+To run tests in CI/CD pipelines:
+
+```yaml
+# Example GitHub Actions workflow
+name: Test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: pip install pytest requests pytest-cov
+      - run: pytest --cov=app --cov-report=xml
+      - uses: codecov/codecov-action@v3
+```
+
+---
+
 ## Optional API Key Protection
 
 Set the `API_KEY` environment variable. When set, every request must include
@@ -385,17 +537,19 @@ Once deployed, create these HTTP tools in Bodhi pointing to your Render URL.
 | `get_stock_candles` | `https://your-app.onrender.com/candles/{{ticker}}?days=60` |
 | `get_indicators` | `https://your-app.onrender.com/indicators/{{ticker}}?tail=15` |
 
-This replaces the 8 Finnhub indicator tools with just 3 — the `/indicators`
-endpoint returns RSI, MACD, Bollinger, ADX, ATR, and SMA-50 in a single response.
+The `/indicators` endpoint returns all 11 indicators in a single response:
+RSI-14, MACD, Bollinger Bands-20, ADX-14, ATR-14, SMA-50, CCI-20, Stochastic-14, OBV, VWAP, EMA-20.
 
-### Sentiment Analyst (1 tool)
+### Sentiment Analyst (2 tools)
 
 | Tool name | URL |
 |-----------|-----|
 | `get_company_news` | `https://your-app.onrender.com/news/{{ticker}}?limit=30` |
+| `get_buzz` | `https://your-app.onrender.com/buzz/{{ticker}}` |
 
-The Sentiment Analyst's LLM classifies the returned headlines as
-positive/negative/neutral — no sentiment library required.
+Each `/news` article includes pre-computed **VADER sentiment scores** (`compound`, `positive`, `negative`, `neutral`, `label`) plus an overall `sentiment_summary` with `avg_compound`, `bullish_ratio`, and `overall_label` — the LLM doesn't need to classify sentiment itself.
+
+The `/buzz` endpoint returns a simple `attention_level` (`high` / `moderate` / `low`) and interpretation derived from news article volume.
 
 ---
 
