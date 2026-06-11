@@ -29,10 +29,10 @@ class QuoteResponse(BaseModel):
 
 class Candle(BaseModel):
     date: str
-    open: float
-    high: float
-    low: float
-    close: float
+    open: Optional[float] = None
+    high: Optional[float] = None
+    low: Optional[float] = None
+    close: Optional[float] = None
     volume: int
 
 
